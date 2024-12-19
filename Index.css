@@ -155,29 +155,7 @@ body {
     align-items: center;
     margin: 5% 0px;
 }
-.banner-4 {
-    position: relative;
-    display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center;
-    margin: 5% 0px;
-}
-.rectangle {
-    position: absolute;
-    width: 120px; /* Chiều rộng hình chữ nhật */
-    height: 40vh; /* Chiều cao hình chữ nhật */
-    background-color:#D3B184; /* Màu sắc của hình chữ nhật */
-    bottom: -5%; /* Đặt khoảng cách từ thẻ img đến hình chữ nhật */
-    z-index: -99999;
-}
-.rectangle-4 {
-    position: absolute;
-    width: 120px; /* Chiều rộng hình chữ nhật */
-    height: 500px; /* Chiều cao hình chữ nhật */
-    background-color:#D3B184; /* Màu sắc của hình chữ nhật */
-    bottom: -10%; /* Đặt khoảng cách từ thẻ img đến hình chữ nhật */
-    z-index: -99999;
-}
+
 
 .service-card {
     display: flex;
@@ -221,8 +199,9 @@ body {
     }
     .line-5 .col-4 {
         width: 90%; /* Đảm bảo các cột co giãn phù hợp */
+        text-align: center;
+        justify-items: center;
     }
-
 
     .container1 .line-5 .rectangle-2 {
         width: 120px;
@@ -300,13 +279,22 @@ body {
     }
     .container1 .line-2 > div:last-child .btn {
         order: 3;
-        bottom: -100%;
+        bottom: -110%;
     }
+
+
+
+
+
     .container1 .line-3 {
         margin-top: 25%;
     }
-    .container1 .line-4 > div:first-child ul {
-        margin-top: 700px;
+ 
+
+
+   
+    .container1 .line-4 > div:first-child {
+        margin-top: 800px;
         width: 100%;
     }
     .container1 .line-4 .step:nth-child(3) .row div:first-child {
@@ -384,19 +372,7 @@ body {
 
 /* Media Query cho iPhone X */
 @media screen and (max-width: 415px) {
-    .container1 .line-4 > div:first-child ul {
-        margin-top: 800px;
-        width: 100%;
-    }
-    .rectangle-4 {
-        width: 120px;
-        height: 200px;
-    }
-}
-
-/* Media Query cho iPhone 12 */
-@media screen and (max-width: 392px) {
-    .container1 .line-4 > div:first-child ul {
+    .container1 .line-4 > div:first-child {
         margin-top: 850px;
         width: 100%;
     }
@@ -404,6 +380,28 @@ body {
     .rectangle-4 {
         width: 120px;
         height: 200px;
+    }
+    .container1 .line-2 > div:last-child .btn {
+        order: 3;
+        bottom: -100%;
+    }
+}
+
+/* Media Query cho iPhone 12 */
+@media screen and (max-width: 392px) {
+      
+    .container1 .line-4 > div:first-child {
+        margin-top: 100px;
+        width: 100%;
+    }
+
+    .rectangle-4 {
+        width: 120px;
+        height: 200px;
+    }
+    .container1 .line-2 > div:last-child .btn {
+        order: 3;
+        bottom: -95%;
     }
     
 }
@@ -468,14 +466,22 @@ body {
 }
 
 .container1 .line-3 .list-service .service-card {
-    width: 500px;
+    width: 550px;
     height: auto;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
+.container1 .line-3 .list-service .service-card ul{
+    margin: 15px 0px;
+ }
+.container1 .line-3 .list-service .service-card ul li{
+    font-size: 14x;
+ }
 .container1 .line-3 .list-service .service-card ul li:first-child {
-   font-size: 30px;
+   font-size: 26px;
+   font-weight: 500;
    list-style: none;
+   margin-bottom: 10px;
 }
 /* .container1 .line-3 .list-service .service-card .btn {
  } */
