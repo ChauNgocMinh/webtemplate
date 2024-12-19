@@ -179,6 +179,21 @@ body {
     z-index: -99999;
 }
 
+.service-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Cách đều nội dung trên và nút dưới */
+    height: 100%; /* Đảm bảo chiều cao đồng đều */
+}
+
+.service-card ul {
+    margin-bottom: auto; /* Đẩy nội dung lên trên */
+}
+
+.service-card .btn {
+    margin-top: auto; /* Đẩy nút xuống dưới */
+    align-self: flex-start; /* Căn giữa nút nếu cần */
+}
 
 
 /* @media screen and (max-width: 1716px) {
@@ -186,17 +201,45 @@ body {
         margin-top: 0px;
     }
 } */
-/* Media Query cho màn hình nhỏ */
+/* Media Query cho iPhone 14 Pro Max */
 @media screen and (max-width: 450px) {
-    .container1 .line-1 {
-        flex-direction: column; 
-        align-items: center;
-        background-image: url(./asset/img/Img.png);
-        background-repeat: no-repeat;
-        background-size: cover;
-        padding: 40px 0;
+  
+    .line-5 {
+        flex-direction: column; /* Chuyển sang hướng cột */
+        align-items: center; /* Căn giữa các phần tử */
+    }
+    .line-5 .position-relative {
+        display: flex;
+        justify-content: center; /* Căn giữa hình ảnh */
+        width: 100%; /* Đảm bảo không bị tràn */
+    }
+    .line-5 .position-relative img {
+        margin: 0 auto; /* Đảm bảo căn giữa hoàn toàn */
+        position: relative; /* Điều chỉnh lại vị trí */
+        top: 0; /* Reset khoảng cách trên */
+        left: 0; /* Reset khoảng cách trái */
+    }
+    .line-5 .col-4 {
+        width: 90%; /* Đảm bảo các cột co giãn phù hợp */
     }
 
+
+    .container1 .line-5 .rectangle-2 {
+        width: 120px;
+        height: 160px;
+    }
+    .container1 .line-5 .display-6 {
+        font-size: 1.5rem;
+    }
+    .container1 .line-5 p {
+        font-size: 0.9rem;
+    }
+    .container1 .line-1 {
+        flex-direction: column;
+        align-items: center;
+        background: url(./asset/img/Img.png) no-repeat center/cover;
+        padding: 40px 0;
+    }
     .container1 .line-1::before {
         content: "";
         position: absolute;
@@ -208,7 +251,6 @@ body {
         opacity: 0.8;
         z-index: 1;
     }
-
     .container1 .line-1 .title,
     .container1 .line-1 .content {
         font-size: 20px;
@@ -216,78 +258,79 @@ body {
         color: white;
         z-index: 2;
     }
-
     .container1 .line-1 .icon-vector-2 img:first-child {
         display: none;
     }
-
     .container1 .line-1 .icon-vector-2 img:last-child {
         position: absolute;
         top: 60%;
         right: 10%;
         width: 10%;
-        height: auto;
         z-index: 2;
     }
-
     .container1 .line-1 .btn {
         background-color: #D3B184;
         color: #19195E;
         z-index: 2;
     }
-
     .container1 .line-1 .banner-1,
     .container1 .line-1 .banner-11 {
         display: none;
     }
-    
     .container1 .line-2,
-    .container1 .line-5 {
+    .container1 .line-5,
+    .container1 .line-4 {
         flex-direction: column;
     }
-
     .container1 .line-2 .col-6,
     .container1 .line-2 .btn,
     .container1 .line-3 .btn,
     .container1 .line-4 .step:last-child div > div:first-child > .btn {
         width: 100%;
-        margin: 10px 0px;
+        margin: 10px 0;
     }
-    
     .container1 .line-2 > div {
         width: 100%;
     }
-    .container1 .line-2 p{
+    .container1 .line-2 p {
         order: 1;
     }
-    .container1 .line-2 .banner-2{
+    .container1 .line-2 .banner-2 {
         order: 2;
     }
-    .container1 .line-2 > div:last-child .btn{
+    .container1 .line-2 > div:last-child .btn {
         order: 3;
         bottom: -100%;
     }
-    .container1 .line-3{
+    .container1 .line-3 {
         margin-top: 25%;
     }
     .container1 .line-4 > div:first-child ul {
-        margin-top: 1000px; /* Thay đổi margin-top về giá trị nhỏ hơn */
+        margin-top: 700px;
         width: 100%;
     }
- 
-
-    .container1 .line-4 .step:nth-child(6){
-        flex-direction: column-reverse;
+    .container1 .line-4 .step:nth-child(3) .row div:first-child {
+        order: 2;
     }
-    .container1 .line-4 .step:nth-child(6) > .row > img{
-        top: 0;
+    .container1 .line-4 .step:nth-child(3) .row div:last-child {
+        order: 1;
+    }
+    .container1 .line-4 .step:nth-child(5) {
+        flex-direction: column;
     }
     
-
-    .container1 .line-4 .step:nth-child(7) div > div {
-        flex-direction: column-reverse;
+    .container1 .line-4 .step:nth-child(6) .row div:first-child {
+        order: 2;
     }
-
+    .container1 .line-4 .step:nth-child(6) .row div:last-child {
+        order: 1;
+    }
+    .container1 .line-4 .step:nth-child(7) .row > div:first-child {
+        order: 2;
+    }
+    .container1 .line-4 .step:nth-child(7) .row > div:last-child {
+        order: 1;
+    }
     .container1 .line-4 .step:nth-child(7) div div:nth-child(2) {
         width: 100vw !important;
     }
@@ -296,43 +339,81 @@ body {
         margin-top: 15px;
     }
     .container1 .line-5 > div:first-child,
-    .container1 .line-5 > div:last-child{
+    .container1 .line-5 > div:last-child {
         margin: 30px 5px;
         width: 100%;
     }
-    .container1 .line-5{
-        flex-direction: column-reverse;
-    }
-    .container1 .line-5 > div:first-child .position-relative{
-        display: none;
-    }
-    .container1 .line-6 > ul li {
-        margin: 10px 0px;
-    }
-
-    .col-12.col-md-6.position-absolute {
-        position: static !important; /* Loại bỏ absolute */
-        text-align: left; /* Căn lại văn bản nếu cần */
-    }
-
-    .footer .container{
+    .container1 .line-5 {
         flex-direction: column;
     }
-
-    .footer .container .footer-2 li:last-child{
-       order: 1;
+    .container1 .line-5 > div:first-child .position-relative {
+        display: none;
     }
-    .footer .container .footer-2 li:first-child{
+
+    .container1 .line-5 div:first-child{
         order: 2;
     }
-    .footer .container .footer-2 li:nth-child(2){
+    .container1 .line-5 div:last-child{
+        order: 1;
+    }
+    .container1 .line-6 > ul li {
+        margin: 10px 0;
+    }
+    .col-12.col-md-6.position-absolute {
+        position: static !important;
+        text-align: left;
+    }
+    .footer .container {
+        flex-direction: column;
+    }
+    .footer .container .footer-2 li:last-child {
+        order: 1;
+    }
+    .footer .container .footer-2 li:first-child {
+        order: 2;
+    }
+    .footer .container .footer-2 li:nth-child(2) {
         order: 3;
+    }
+
+    .footer img{
+        display: flex;
+        justify-content: start;
+    }
+}
+
+/* Media Query cho iPhone X */
+@media screen and (max-width: 415px) {
+    .container1 .line-4 > div:first-child ul {
+        margin-top: 800px;
+        width: 100%;
+    }
+    .rectangle-4 {
+        width: 120px;
+        height: 200px;
+    }
+}
+
+/* Media Query cho iPhone 12 */
+@media screen and (max-width: 392px) {
+    .container1 .line-4 > div:first-child ul {
+        margin-top: 850px;
+        width: 100%;
+    }
+
+    .rectangle-4 {
+        width: 120px;
+        height: 200px;
     }
     
 }
-
-
-
+/* 
+@media screen and (max-width: 770px) {
+    .container1 .line-4 > div:first-child ul {
+        margin-top: 2000px;
+        width: 100%;
+    }
+} */
 
 
 /* Line 2 */
