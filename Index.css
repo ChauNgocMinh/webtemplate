@@ -1,112 +1,426 @@
-*{
-    margin: 0px;
-    padding: 0px;
-    font-family: Crimson Text;
-
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Crimson Text', serif;
 }
-a{
+
+a {
     color: black;
     text-decoration: none;
 }
-body{
-}
-.header{
 
-}
-.nav-menu{
-}
-.nav-menu .list-item{
-
-}
-.nav-menu .item{
-}
-.nav-menu .item:last-child{
-    background-color: #3E4595;
-    padding: 0px 30px;
+body {
+    width: 100%;
+    
+    /* Optional background or styling */
 }
 
-
-
-
-
-.container1{
-   height: 2500px;
-   width: 100%;
-   font-size: 16px;
+.header {
+    /* Header styles */
+}
+/* Thay đổi nút menu cho dễ nhìn */
+.navbar-toggler {
+    border: none;
+    background-color: #f3f3f3;
 }
 
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+.navbar-nav .nav-link {
+    font-size: 16px;
+    font-weight: 500;
+    padding: 10px;
+}
+
+
+/* Default mobile-first styles */
+.header .nav-menu .nav-item {
+    color: var(--12251-f, #3E4595); /* Màu sắc của các mục menu */
+    font-size: 20px; /* Kích thước font chữ */
+    font-weight: 400; /* Độ đậm của chữ */
+    line-height: normal; /* Chiều cao dòng */
+    letter-spacing: 1px; /* Khoảng cách giữa các chữ cái */
+    text-transform: uppercase; /* Chữ in hoa */
+}
+
+.header .nav-menu .item-call {
+    display: flex;
+    height: 93px; /* Chiều cao của mục điện thoại */
+    align-items: center; /* Canh giữa các phần tử */
+    gap: 15px; /* Khoảng cách giữa các phần tử */
+}
+
+.header .nav-menu .item-call p {
+    color: #FFF; /* Màu chữ của mục điện thoại */
+    font-size: 24px; /* Kích thước font chữ */
+}
+
+.nav-menu .item:last-child {
+    background-color: #3E4595; /* Màu nền cho item cuối cùng */
+    padding: 0 30px; /* Padding bên trái và bên phải */
+}
+
+/* iPhone 14 Pro Max (430px width) */
+@media (max-width: 430px) {
+    .nav-menu ul {
+        flex-direction: column;
+        align-items: center; /* Căn giữa các item */
+    }
+
+    .nav-item {
+        font-size: 16px; /* Giảm kích thước font chữ trên các màn hình nhỏ */
+        padding: 8px 0; /* Padding cho các mục menu */
+    }
+
+    .navbar-toggler {
+        margin-right: 10px; /* Khoảng cách của nút hamburger */
+    }
+
+    .item-call {
+        display: none; /* Ẩn mục gọi điện trên màn hình nhỏ */
+    }
+
+    .header .nav-menu .item {
+        display: block;
+        margin-bottom: 15px; /* Thêm khoảng cách dưới mỗi mục */
+    }
+
+    .header .nav-menu .nav-item {
+        font-size: 18px; /* Điều chỉnh lại font-size */
+        text-align: center; /* Căn giữa văn bản trong menu */
+    }
+
+    .nav-menu .item:last-child {
+        padding: 0 10px; /* Thay đổi padding cho mục cuối cùng */
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-nav {
+        text-align: center;
+    }
+
+    .nav-item {
+        padding: 8px 0;
+        font-size: 14px; /* Điều chỉnh font-size */
+    }
+
+    .container1 .line-3 {
+        padding: 30px 15px;
+    }
+}
+
+@media (max-width: 430px) {
+    .header .nav-menu .item img {
+        max-width: 100px;
+    }
+
+    .btn-start {
+        width: 100%; /* Đầy đủ chiều rộng trên màn hình nhỏ */
+    }
+
+    .container1 .line-3 {
+        font-size: 14px;
+    }
+}
+
+
+.container1 {
+    width: 100%;
+    font-size: 16px;
+    height: auto;
+}
 
 /* Line 1 */
-.container1 .line-1{
+.container1 .line-1 {
+    height: auto;
     background-color: #F5F4F0;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
 }
-.container1 .line-1 .btn{
+
+.container1 .line-1 .btn-learn-about {
+    display: inline-flex;
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
     border: none;
-    border-radius: 0px;
-    padding: 10px;
-    background-color: #3E4595;
-    color: white;
-
+    cursor: pointer;
 }
 
+.container1 .line-1 .line1-title {
+    color: var(--12251-f, #3E4595);
+    font-size: 24px;
+    font-weight: 400;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.container1 .line-1 .line1-content {
+    color: var(--Text, #19195E);
+    font-size: 50px;
+    font-weight: 500;
+    line-height: 1.2;
+    text-transform: uppercase;
+}
 
 /* Line 2 */
-.container1 .line-2 .btn{
-    border: none;
-    border-radius: 0px;
-    padding: 10px;
+.container1 .line-2 .btn {
+    padding: 10px 20px;
     background-color: #3E4595;
     color: white;
-}
-
-
-
-
-
-/* Line 3 */
-.container1 .line-3{
-    color: white;
-    background-image:url(./asset/img/Img2.png);
-    height: 100vh;
-}
-.container1 .line-3 .btn{
     border: none;
     border-radius: 0px;
-    padding: 10px;
-    background-color: #D3B184;
-    color: white;
+
 }
-/* .container1 .line-3 .list-service div{
-    
- } */
-.container1 .line-3 .list-service div ul li:first-child{
-   font-size: 30px;
-   font-weight: 500;
-   list-style: none;
-}
-.container1 .line-3 .list-service {
+
+.container1 .banner-2 .rectangle {
     position: absolute;
+    background-color: #D3B184;
+    width: 37%;
+    height: calc(100% + 80px);
+    top: -40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 0;
+}
+.container1 .banner-2 img {
+    position: relative;
+    z-index: 1; /* Đặt ảnh lên trên hình chữ nhật */
 }
 
+/* Line 3 */
+.container1 .line-3 {
+    color: white;
+    background-image: url('./asset/img/Img2.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: auto;
 
+}
 
+/* Styling nút button */
+.container1 .line-3 .btn {
+    border: none;
+    border-radius: 0px;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    transition: all 0.3s ease; /* Hiệu ứng mượt mà khi hover */
+}
 
+.container1 .line-3 .btn:hover {
+    transform: scale(1.05); /* Hiệu ứng phóng to nhẹ khi hover */
+}
 
+/* Styling danh sách dịch vụ */
+.container1 .line-3 .list-service div ul {
+    height: auto;
+}
 
+.container1 .line-3 .list-service div ul li {
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 5px;
+}
 
+.container1 .line-3 .list-service div ul li:first-child {
+    font-size: 32px; /* Tăng kích thước tiêu đề đầu tiên */
+    font-weight: 500;
+    list-style: none;
+}
 
-.footer{
+/* Styling các thẻ dịch vụ */
+.container1 .line-3 .list-service div {
+    
+    height: auto;    
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15); /* Hiệu ứng đổ bóng */
+    transition: all 0.3s ease; /* Hiệu ứng hover */
+}
+
+.container1 .line-3 .list-service div:hover {
+    transform: translateY(-5px); /* Hiệu ứng nổi lên khi hover */
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Line 4 */
+.container1 .line-4 > div ul li a{
+    color: var(--Text, #19195E);
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+}
+
+.container1 .line-4 > div:first-child ul li:first-child {
+    display: flex;
+    padding: 15px 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background: var(--12251-f, #3E4595);
+}
+
+.container1 .line-4 > div:first-child ul li:first-child a{
+    color: var(--ffffff, #FFF);
+    font-family: "Crimson Text";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-transform: uppercase;
+    margin: 0;
+}
+.working-process p{
+    color: #19195E;
+    font-family: "Crimson Text";
+    font-size: 27px;
+    font-style: normal;
+    /* font-weight: 600; */
+    line-height: normal;
+    letter-spacing: 1.44px;
+    text-transform: uppercase;
+}
+
+#step-2 h4{
+    color:  #19195E;
+    font-family: "Crimson Text";
+    font-size: 17px;
+}
+
+.title-step{
+    color: var(--Text, #19195E);
+    font-family: "Crimson Text";
+    font-size: 25px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    letter-spacing: 0.96px;
+    text-transform: uppercase;
+}
+
+.number-step{
+    color: #19195E;
+    font-family: "Crimson Text";
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.6px;
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+}
+ul .content-step{
+
+}
+
+.content-step{
+    color: #19195E;
+    font-family: "Source Sans Pro";
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 400;
+   
+}
+
+.container1 .line-4 .step div {
+    margin-bottom: 15px;
+}
+
+.footer {
     background-color: #0E0E38;
-    color :white;
+    color: white;
     height: auto;
     width: 100%;
     font-size: 12px;
+    padding: 3rem 0;
 }
-.footer .footer-2{
-    list-style: none;
 
+.footer .footer-2 {
+    list-style: none;
+    padding: 0;
+    margin: 0;
 }
-.footer .footer-2 li > p:first-child{
+
+.footer .footer-2 li > p:first-child {
     font-size: 20px;
-    font-size: bold;
+    font-weight: bold;
+}
+
+/* Email */
+.email {
+    color: #FFF;
+    font-family: "Crimson Text";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 60px */
+}
+
+/* Tiêu đề Liên hệ */
+.contact-title {
+    color: #FFF;
+    font-family: "Crimson Text";
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 150%; /* 36px */
+    text-transform: uppercase;
+}
+
+/* Tiêu đề Bạn cần giải đáp gì không? */
+.inquiry-title {
+    color: #F5F4F0;
+    font-family: "Crimson Text";
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+}
+
+.btn-start {
+    background-color: #3E4595;
+    color: #FFF;
+    border: 1px solid #3E4595;
+    border-radius: 0;
+    padding: 12px 15px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    width: 40%;
+    transition: background-color 0.3s ease;
+}
+
+.btn-start:hover {
+    background-color: #2a326f;
+}
+
+.email-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.form-control {
+    padding: 12px 15px;
+    font-size: 16px;
+    border-radius: 0;
+    border: 1px solid #ccc;
+    margin: 0 !important;
+}
+
+.form-control:focus {
+    border-color: #3E4595;
+    box-shadow: 0 0 5px rgba(62, 69, 149, 0.5);
 }
