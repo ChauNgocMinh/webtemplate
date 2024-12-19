@@ -1,0 +1,112 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    font-family: Crimson Text;
+
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+body{
+}
+.header{
+
+}
+.nav-menu{
+}
+.nav-menu .list-item{
+
+}
+.nav-menu .item{
+}
+.nav-menu .item:last-child{
+    background-color: #3E4595;
+    padding: 0px 30px;
+}
+
+
+
+
+
+.container1{
+   height: 2500px;
+   width: 100%;
+   font-size: 16px;
+}
+
+
+/* Line 1 */
+.container1 .line-1{
+    background-color: #F5F4F0;
+}
+.container1 .line-1 .btn{
+    border: none;
+    border-radius: 0px;
+    padding: 10px;
+    background-color: #3E4595;
+    color: white;
+
+}
+
+
+/* Line 2 */
+.container1 .line-2 .btn{
+    border: none;
+    border-radius: 0px;
+    padding: 10px;
+    background-color: #3E4595;
+    color: white;
+}
+
+
+
+
+
+/* Line 3 */
+.container1 .line-3{
+    color: white;
+    background-image:url(./asset/img/Img2.png);
+    height: 100vh;
+}
+.container1 .line-3 .btn{
+    border: none;
+    border-radius: 0px;
+    padding: 10px;
+    background-color: #D3B184;
+    color: white;
+}
+/* .container1 .line-3 .list-service div{
+    
+ } */
+.container1 .line-3 .list-service div ul li:first-child{
+   font-size: 30px;
+   font-weight: 500;
+   list-style: none;
+}
+.container1 .line-3 .list-service {
+    position: absolute;
+}
+
+
+
+
+
+
+
+
+.footer{
+    background-color: #0E0E38;
+    color :white;
+    height: auto;
+    width: 100%;
+    font-size: 12px;
+}
+.footer .footer-2{
+    list-style: none;
+
+}
+.footer .footer-2 li > p:first-child{
+    font-size: 20px;
+    font-size: bold;
+}
