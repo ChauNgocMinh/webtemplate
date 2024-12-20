@@ -372,7 +372,7 @@ body {
 /* Media Query cho iPhone X */
 @media screen and (max-width: 415px) {
     .container1 .line-4 > div:first-child {
-        margin-top: 950px;
+        margin-top: 900px;
         width: 100%;
     }
 
@@ -410,6 +410,77 @@ body {
         width: 650px;
     }
 } */
+
+
+.banner-2 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.banner-2 .rectangle-top,
+.banner-2 .rectangle-bottom {
+    position: absolute;
+    width: 60%; /* Chiều rộng hình chữ nhật */
+    height: 40px; /* Chiều cao hình chữ nhật */
+    background-color: #e0c9a6; /* Màu sắc của hình chữ nhật */
+    z-index: 1; /* Nằm dưới hình ảnh */
+}
+
+.banner-2 .rectangle-top {
+    top: -20px; /* Đẩy hình chữ nhật lên trên */
+}
+
+.banner-2 .rectangle-bottom {
+    bottom: -20px; /* Đẩy hình chữ nhật xuống dưới */
+}
+
+.banner-2 .main-image {
+    position: relative;
+    z-index: 2; /* Hình ảnh nằm trên hình chữ nhật */
+    max-width: 100%; /* Đảm bảo hình ảnh phản hồi tốt */
+}
+
+
+
+
+
+#step-4 .banner-4 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#step-4 .rectangle-top,
+#step-4 .rectangle-bottom {
+    position: absolute;
+    width: 60%;
+    height: 40px;
+    background-color: #e0c9a6; /* Màu hình chữ nhật */
+    z-index: 1;
+}
+
+#step-4 .rectangle-top {
+    top: -20px; /* Đẩy hình chữ nhật lên trên */
+}
+
+#step-4 .rectangle-bottom {
+    bottom: -20px; /* Đẩy hình chữ nhật xuống dưới */
+}
+
+#step-4 .main-image {
+    position: relative;
+    z-index: 2; /* Đảm bảo hình ảnh nằm trên hình chữ nhật */
+    max-width: 100%;
+}
+
+
+
+
+
+
 
 
 
