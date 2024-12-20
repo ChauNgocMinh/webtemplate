@@ -284,17 +284,16 @@ body {
 
 
 
-
-
     .container1 .line-3 {
-        margin-top: 25%;
+        margin: 25% 0px;
+        text-align: center;
     }
  
 
 
    
     .container1 .line-4 > div:first-child {
-        margin-top: 800px;
+        margin-top: 900px;
         width: 100%;
     }
     .container1 .line-4 .step:nth-child(3) .row div:first-child {
@@ -373,7 +372,7 @@ body {
 /* Media Query cho iPhone X */
 @media screen and (max-width: 415px) {
     .container1 .line-4 > div:first-child {
-        margin-top: 850px;
+        margin-top: 950px;
         width: 100%;
     }
 
@@ -391,7 +390,7 @@ body {
 @media screen and (max-width: 392px) {
       
     .container1 .line-4 > div:first-child {
-        margin-top: 100px;
+        margin-top: 1100px;
         width: 100%;
     }
 
@@ -403,20 +402,19 @@ body {
         order: 3;
         bottom: -95%;
     }
-    
+    /* .container1 .line-4 .step:nth-child(6) img {
+    } */
 }
-/* 
-@media screen and (max-width: 770px) {
-    .container1 .line-4 > div:first-child ul {
-        margin-top: 2000px;
-        width: 100%;
+/* @media screen and (max-width: 1920px) {
+    .container1 .line-3 .list-service .service-card{
+        width: 650px;
     }
 } */
 
 
+
 /* Line 2 */
 .container1 .line-2 {
-    margin-top: 10%;
 }
 
 .container1 .line-2 .btn {
@@ -463,6 +461,7 @@ body {
 
 .container1 .line-3 .list-service {
     position: absolute;
+    margin-top: 5%;
 }
 
 .container1 .line-3 .list-service .service-card {
@@ -494,7 +493,7 @@ body {
 /* Line 4 */
 .container1 .line-4 {
     color: #19195E;
-    margin-top: 25%;
+    margin-top: 40%;
 }
 
 .container1 .line-4 > div ul li {
