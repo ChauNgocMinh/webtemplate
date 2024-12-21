@@ -128,7 +128,7 @@ body {
 
 .container1 .line-1 .content {
     color: var(--Text, #19195E);
-    font-size: 50px;
+    font-size: 55px;
     line-height: 1.2;
 }
 
@@ -565,7 +565,7 @@ body {
 
 .container1 .line-3 .list-service {
     position: absolute;
-    margin-top: 10%;
+    margin-top: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -573,14 +573,14 @@ body {
 }
 
 .container1 .line-3 .list-service .service-card {
-    width: 550px;
-    height: auto;
+    width: 600px;
+    height: 45vh;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
 
 .container1 .line-3 .list-service .service-card ul {
-    margin: 15px 0px;
+    /* margin: 15px 0px; */
 }
 
 .container1 .line-3 .list-service .service-card ul li {
@@ -591,7 +591,7 @@ body {
     font-size: 26px;
     font-weight: 500;
     list-style: none;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .container1 .line-3 .list-service .service-card:hover {
@@ -610,7 +610,7 @@ body {
     padding: 10px;
 }
 
-.container1 .line-4 > div:first-child ul li:first-child {
+.container1 .line-4 > .row  > div:first-child ul li:first-child {
     background-color: #3E4595;
 }
 .container1 .line-4 > div:first-child ul li:first-child a {
