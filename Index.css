@@ -1,4 +1,4 @@
-/* Reset toàn bộ phần tử */
+
 * {
     margin: 0;
     padding: 0;
@@ -14,58 +14,45 @@ html, body {
     padding: 0;
     overflow-x: hidden;
 }
-img {
-    max-width: 100%;
-    height: auto; /* Đảm bảo hình ảnh không tràn ra ngoài */
-}
+
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
     display: flex;
     flex-wrap: wrap;
-    margin-left: 0; /* Đảm bảo không có khoảng trống bên trái */
-    margin-right: 0; /* Đảm bảo không có khoảng trống bên phải */
+    margin-left: 0;
+    margin-right: 0;
 }
-.container-fluid {
-    padding-right: 0; /* Xóa padding bên phải */
-    padding-left: 0; /* Xóa padding bên trái */
-    margin-right: 0; /* Xóa margin bên phải */
-    margin-left: 0; /* Xóa margin bên trái */
-}
+/* .container-fluid {
+    padding-right: 0;
+    padding-left: 0;
+    margin-right: 0; 
+    margin-left: 0; 
+} */
 
-/* Liên kết */
 a {
     color: black;
     text-decoration: none;
 }
 
-/* Cấu hình cho thẻ body */
 body {
     width: 100%;
 }
 
-/* Header */
-.header {
-    /* Header styles */
-}
 
-/* Nút menu */
+
 .navbar-toggler {
     border: none;
     background-color: #f3f3f3;
 }
-
 .navbar-toggler-icon {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
-
-/* Liên kết trong navbar */
 .navbar-nav .nav-link {
     font-size: 16px;
     font-weight: 500;
     padding: 10px;
 }
-
 /* Cấu hình mặc định */
 .header .nav-menu .nav-item {
     color: var(--12251-f, #3E4595);
@@ -75,30 +62,36 @@ body {
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-
 .header .nav-menu .item-call {
     display: flex;
     height: 93px;
     align-items: center;
     gap: 15px;
 }
-
 .header .nav-menu .item-call p {
     color: #FFF;
     font-size: 24px;
 }
-
 .nav-menu .item:last-child {
     background-color: #3E4595;
     padding: 0 30px;
 }
 
-/* Container 1 */
+.container1 .line-1 #img,
+.container1 .line-2 #img,
+.container1 .line-3 #img,
+.container1 .line-4 #img,
+.container1 .line-6 #img{
+    width: 100%;
+    height: auto;
+}
+
+
+/*************************************** Line 1 ***************************************/
 .container1 {
     font-size: 16px;
 }
 
-/* Line 1 */
 .container1 .line-1 {
     background-color: #F5F4F0;
     margin-bottom: 50px;
@@ -113,7 +106,7 @@ body {
     border: none;
     border-radius: 0px;
     cursor: pointer;
-    width: 50%;
+    width: 25%;
     text-align: center;
     padding: 10px 0px;
     background-color: #3E4595;
@@ -136,91 +129,129 @@ body {
     position: relative;
 }
 
-.container1 .line-1 .banner-11 {
+.container1 .line-1 .banner-11  {
     position: absolute;
     display: block;
     
     background-color: #3E4595;
     color: #ffff;
     width: 25%;
-    bottom: -15%;
+    bottom: -10%;
     left: 40%;
     padding: 20px 0px ;
 }
 
-.banner-2 {
-    position: relative;
-    display: flex;
-    justify-content: center; /* Căn giữa theo chiều ngang */
-    align-items: center;
-    margin: 5% 0px;
-}
 
 
-.service-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Cách đều nội dung trên và nút dưới */
-    height: 100%; /* Đảm bảo chiều cao đồng đều */
-}
 
-.service-card ul {
-    margin-bottom: auto; /* Đẩy nội dung lên trên */
-}
-
-.service-card .btn {
-    margin-top: auto; /* Đẩy nút xuống dưới */
-    align-self: flex-start; /* Căn giữa nút nếu cần */
-}
-
-
-/* @media screen and (max-width: 1716px) {
-    .container1 .line-4 {
-        margin-top: 0px;
-    }
-} */
-/* Media Query cho iPhone 14 Pro Max */
-@media screen and (max-width: 450px) {
+/* Media Query cho Tablet (từ 768px đến 1024px) */
+@media screen and (max-width: 1024px) {
   
-    .line-5 {
-        flex-direction: column; /* Chuyển sang hướng cột */
-        align-items: center; /* Căn giữa các phần tử */
+    #img{
+        width: auto ;
     }
-    .line-5 .position-relative {
-        display: flex;
-        justify-content: center; /* Căn giữa hình ảnh */
-        width: 100%; /* Đảm bảo không bị tràn */
+    /* Cấu hình lại giao diện cho tablet */
+    .container1 .line-1 {
+        padding: 30px 0;
     }
-    .line-5 .position-relative img {
-        margin: 0 auto; /* Đảm bảo căn giữa hoàn toàn */
-        position: relative; /* Điều chỉnh lại vị trí */
-        top: 0; /* Reset khoảng cách trên */
-        left: 0; /* Reset khoảng cách trái */
+    .container1 .line-1 .btn{
+        width: 50% !important;
     }
-    .line-5 .col-4 {
-        width: 90%; /* Đảm bảo các cột co giãn phù hợp */
-        text-align: center;
-        justify-items: center;
+    .container1 .line-1 .banner-11{
+        width: 50% !important;
+    }
+    .container1 .line-2 {
+        flex-direction: row; /* Đảm bảo các phần tử trong dòng 2 được căn chỉnh đúng */
+    }
+    .container1 .line-2 .row div:last-child {
+        width: auto !important;
+    }
+    .container1 .line-3 .list-service {
+        flex-direction: row; /* Sử dụng flex row cho các card dịch vụ trên tablet */
+        gap: 20px;
+    }
+    .container1 .line-3 .list-service .service-card {
+        width: 100% !important;
+        height: 35vh !important;
+    }
+    .container1 .line-4{
+    }
+    .container1 .line-4 .row .step:nth-child(6) .row div:first-child{
+        order: 2;
+    }
+    .container1 .line-4 .row .step:nth-child(6) .row div:last-child{
+        order: 1;
+    }
+    
+    .container1 .line-4 .row .step:nth-child(8) .row .btn {
+        margin: 15px 0px;
+        width: 100% !important;
+    }
+
+    
+    .container1 .line-5 > div:last-child {
+        text-align: center !important;
+        justify-items: center !important;
+    }
+
+
+    .container1 .line-4{
+        margin-top: 1100px !important;
+    }
+    .container1 .line-5 {
+        align-items: flex-start;
+    }
+    .container1 .line-5 {
+        justify-content: space-between !important;
+    }
+    .footer .container {
+        flex-direction: row; /* Thay đổi chiều hướng footer cho màn hình rộng */
+    }
+}
+
+/* Media Query cho PC/Laptop (từ 1024px trở lên) */
+@media screen and (min-width: 1025px) {
+    /* Cấu hình lại giao diện cho PC/Laptop */
+    .container1 .line-1 {
+        padding: 50px 0;
+    }
+
+    .container1 .line-3 .list-service {
+        flex-direction: row; /* Sử dụng flex row cho các card dịch vụ trên PC */
+        gap: 30px;
     }
    
+    .container1 .line-4 .row div:first-child {
+        margin-top: 20px;
+    }
+
+    .footer .container {
+        flex-direction: row; /* Hiển thị footer theo dạng hàng ngang */
+        justify-content: space-between;
+    }
+
+    .footer .container .footer-2 li {
+        order: initial; /* Quay lại thứ tự ban đầu của các phần tử trong footer */
+    }
+}
 
 
-    .container1 .line-5 .rectangle-2 {
-        width: 120px;
-        height: 160px;
+
+/* Media Query cho iPhone 14 Pro Max */
+@media screen and (max-width: 450px) {
+
+    ul {
+        padding-left: 1rem;
     }
-    .container1 .line-5 .display-6 {
-        font-size: 1.5rem;
-    }
-    .container1 .line-5 p {
-        font-size: 0.9rem;
-    }
+
+    /*************************************** Line 1 ***************************************/
     .container1 .line-1 {
         flex-direction: column;
         align-items: center;
         background: url(./asset/img/Img.png) no-repeat center/cover;
         padding: 40px 0;
     }
+
     .container1 .line-1::before {
         content: "";
         position: absolute;
@@ -232,16 +263,18 @@ body {
         opacity: 0.8;
         z-index: 1;
     }
+
     .container1 .line-1 .title,
     .container1 .line-1 .content {
         font-size: 20px;
-        text-align: center;
         color: white;
         z-index: 2;
     }
+
     .container1 .line-1 .icon-vector-2 img:first-child {
         display: none;
     }
+
     .container1 .line-1 .icon-vector-2 img:last-child {
         position: absolute;
         top: 60%;
@@ -249,182 +282,218 @@ body {
         width: 10%;
         z-index: 2;
     }
+
     .container1 .line-1 .btn {
         background-color: #D3B184;
         color: #19195E;
+        width: 100%;
         z-index: 2;
     }
+
     .container1 .line-1 .banner-1,
     .container1 .line-1 .banner-11 {
         display: none;
     }
-    .container1 .line-2,
-    .container1 .line-5,
-    .container1 .line-4 {
+
+    /*************************************** Line 2 ***************************************/
+    .container1 .line-2 {
         flex-direction: column;
     }
+
+    .container1 .line-2 .row > div {
+        width: 100%;
+    }
+
+    .container1 .line-2 .row p {
+        order: 1;
+    }
+
+    .container1 .line-2 .row .banner-2 {
+        order: 2;
+    }
+
+    .container1 .line-2 .row > div:last-child .btn {
+        order: 3;
+        bottom: -112%;
+    }
+
+    /*************************************** Line 3 ***************************************/
+    .container1 .line-3 {
+        height: auto;
+        padding: 10% 0;
+    }
+    .container1 .line-3  div:nth-child(2) h3{
+        width: 75% !important;
+    }
+    .container1 .line-3 .list-service {
+        display: flex;
+        flex-direction: column; /* Chuyển các card thành cột dọc */
+        gap: 50px; /* Tạo khoảng cách giữa các card */
+    }
+
+    .container1 .line-3 .list-service .service-card {
+        width: 100% !important;
+        padding: 20px;
+        height: 50vh !important;
+    }
+
+    .container1 .line-3 .list-service .service-card ul li:first-child {
+        font-size: 20px;
+    }
+
+    .container1 .line-3 .btn {
+        align-self: center;
+        width: 100% !important;
+    }
+
+    /*************************************** Line 4 ***************************************/
+    .container1 .line-4 {
+        margin-top: 1600px !important ;
+    }
+   
+   
+    .container1 .line-4 .row div:first-child {
+        flex-direction: row;
+        color: #19195E;
+    }
+
+    .container1 .line-4 .row p {
+        text-align: center;
+    }
+
+    .container1 .line-4 .row .step:nth-child(3) .row div:first-child {
+        order: 2;
+    }
+
+    .container1 .line-4 .row .step:nth-child(3) .row div:last-child {
+        order: 1;
+    }
+
+    .container1 .line-4 .row .step:nth-child(6) .row div:first-child {
+        order: 2;
+    }
+
+    .container1 .line-4 .row .step:nth-child(6) .row div:last-child {
+        order: 1;
+    }
+
+    .container1 .line-4 .row .step:nth-child(7) .row > div:last-child {
+        order: 1;
+    }
+
+    .container1 .line-4 .row .step:nth-child(7) .row > div:first-child {
+        order: 2;
+    }
+
+    .container1 .line-4 .row .step:nth-child(7) .row div:nth-child(2) {
+        width: 100%;
+        height: auto;
+    }
+
+    .container1 .line-4 .row .step:nth-child(8) .row .btn {
+        margin: 15px 0px;
+        width: 100% !important;
+    }
+
+    /*************************************** Line 5 ***************************************/
+    .container1 .line-5 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .container1 .line-5 .position-relative {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .container1 .line-5 .display-6 {
+        font-size: 1.5rem;
+    }
+
+    .container1 .line-5 > div:first-child,
+    .container1 .line-5 > div:last-child {
+        margin: 30px 5px;
+        width: 100%;
+        text-align: center;
+        justify-items: center;
+    }
+
+    .container1 .line-5 div:first-child {
+        order: 2;
+    }
+
+    .container1 .line-5 div:last-child {
+        order: 1;
+    }
+
+    /*************************************** Line 6 ***************************************/
+    .container1 .line-6 > ul li {
+        margin: 10px 0;
+    }
+
+    .col-12.col-md-6.position-absolute {
+        position: static !important;
+        text-align: left;
+    }
+
     .container1 .line-2 .btn,
     .container1 .line-3 .btn,
     .container1 .line-4 .step:last-child div > div:first-child > .btn {
         width: 100%;
         margin: 10px 0;
     }
-    .container1 .line-2 div:first-child {
-    }
-    .container1 .line-2 > div {
-        width: 100%;
-    }
-    .container1 .line-2 p {
-        order: 1;
-    }
-    
-    .container1 .line-2 .banner-2 {
-        order: 2;
-    }
-    .container1 .line-2 > div:last-child .btn {
-        order: 3;
-        bottom: -112%;
-    }
 
-
-/* 
-    .container1 .line-3 {
-        margin: 25% 0px;
-        text-align: center;
-    } */
-    
-    .container1 .line-3 {
-        margin-top: 20%;
-        height: auto; /* Cho phép chiều cao tự động với nội dung */
-        padding: 10% 0; /* Căn chỉnh lại khoảng cách */
-    }
-
-    .container1 .line-3 .list-service {
-        flex-direction: column; /* Chuyển sang hiển thị theo cột */
-        padding: 0 20px; /* Tạo khoảng trắng hai bên */
-        margin-top: 0; /* Loại bỏ khoảng cách thừa */
-    }
-
-    .container1 .line-3 .list-service .service-card {
-        width: 100%; /* Chiếm toàn bộ chiều rộng màn hình */
-        max-width: 100%; /* Bỏ giới hạn chiều rộng */
-        margin-bottom: 20px; /* Khoảng cách giữa các thẻ */
-    }
-
-    .container1 .line-3 .list-service .service-card ul li:first-child {
-        font-size: 20px; /* Giảm kích thước tiêu đề để phù hợp màn hình nhỏ */
-    }
-
-    .container1 .line-3 .btn {
-        align-self: center; /* Căn giữa nút */
-    }
-  
-    .container1 .line-4 > div:first-child {
-        margin-top: 955px;
-        width: 100%;
-    }
-    .container1 .line-4 .step:nth-child(3) .row div:first-child {
-        order: 2;
-    }
-    .container1 .line-4 .step:nth-child(3) .row div:last-child {
-        order: 1;
-    }
-    .container1 .line-4 .step:nth-child(5) {
-        flex-direction: column;
-    }
-    
-    .container1 .line-4 .step:nth-child(6) .row div:first-child {
-        order: 2;
-    }
-    .container1 .line-4 .step:nth-child(6) .row div:last-child {
-        order: 1;
-    }
-    .container1 .line-4 .step:nth-child(7) .row > div:first-child {
-        order: 2;
-    }
-    .container1 .line-4 .step:nth-child(7) .row > div:last-child {
-        order: 1;
-    }
-    .container1 .line-4 .step:nth-child(7) div div:nth-child(2) {
-        width: 100vw !important;
-    }
-    .container1 .line-4 .step:nth-child(8) div > .btn {
-        width: 100% !important;
-        margin-top: 15px;
-    }
-    .container1 .line-5 > div:first-child,
-    .container1 .line-5 > div:last-child {
-        margin: 30px 5px;
-        width: 100%;
-    }
-    .container1 .line-5 {
-        flex-direction: column;
-    }
-    .container1 .line-5 > div:first-child .position-relative {
-        display: none;
-    }
-
-    .container1 .line-5 div:first-child{
-        order: 2;
-    }
-    .container1 .line-5 div:last-child{
-        order: 1;
-    }
-    .container1 .line-6 > ul li {
-        margin: 10px 0;
-    }
-    .col-12.col-md-6.position-absolute {
-        position: static !important;
-        text-align: left;
-    }
+    /*************************************** Line Footer ***************************************/
     .footer .container {
         flex-direction: column;
     }
+
     .footer .container .footer-2 li:last-child {
         order: 1;
     }
+
     .footer .container .footer-2 li:first-child {
         order: 2;
     }
+
     .footer .container .footer-2 li:nth-child(2) {
         order: 3;
     }
 
-    .footer img{
+    .footer img {
         display: flex;
         justify-content: start;
     }
 }
 
-/* Media Query cho iPhone X */
+/* Cho iPhone X */
 @media screen and (max-width: 415px) {
-   
     .container1 .line-2 > div:last-child .btn {
         order: 3;
         bottom: -102%;
     }
+
     .container1 .line-3 {
         margin-top: 20%;
-        height: auto; /* Cho phép chiều cao tự động với nội dung */
-        padding: 10% 0; /* Căn chỉnh lại khoảng cách */
+        height: auto;
+        padding: 10% 0;
     }
+
     .container1 .line-4 > div:first-child {
-        margin-top: 1050px;
         width: 100%;
     }
-    
+
     .rectangle-4 {
         width: 120px;
         height: 200px;
     }
-   
 }
 
-/* Media Query cho iPhone 12 */
+/* Cho iPhone 12 */
 @media screen and (max-width: 392px) {
-      
-    .container1 .line-4 > div:first-child {
-        margin-top: 1175px;
+    .container1 .line-4 {
+        margin-top:1500px !important;
         width: 100%;
     }
 
@@ -432,94 +501,30 @@ body {
         width: 120px;
         height: 200px;
     }
+
     .container1 .line-2 > div:last-child .btn {
         order: 3;
         bottom: -100%;
     }
+
     .container1 .line-3 {
         margin-top: 25%;
-        height: auto; /* Cho phép chiều cao tự động với nội dung */
-        padding: 10% 0; /* Căn chỉnh lại khoảng cách */
+        height: auto;
+        padding: 10% 0;
     }
-    
-   
-}
-/* @media screen and (max-width: 1920px) {
     .container1 .line-3 .list-service .service-card{
-        width: 650px;
+        height: 50vh !important;
     }
-} */
-
-
-.banner-2 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
-
-.banner-2 .rectangle-top,
-.banner-2 .rectangle-bottom {
-    position: absolute;
-    width: 25%; /* Chiều rộng hình chữ nhật */
-    height: 40px; /* Chiều cao hình chữ nhật */
-    background-color: #e0c9a6; /* Màu sắc của hình chữ nhật */
-    z-index: 1; /* Nằm dưới hình ảnh */
-}
-
-.banner-2 .rectangle-top {
-    top: -20px; /* Đẩy hình chữ nhật lên trên */
-}
-
-.banner-2 .rectangle-bottom {
-    bottom: -20px; /* Đẩy hình chữ nhật xuống dưới */
-}
-
-.banner-2 .main-image {
-    position: relative;
-    z-index: 2; /* Hình ảnh nằm trên hình chữ nhật */
-    max-width: 100%; /* Đảm bảo hình ảnh phản hồi tốt */
+@media screen and (max-width:1920px){
+    .container1 .line-3 .list-service .service-card {
+        height: 40vh;
+    }
 }
 
 
 
-
-
-#step-4 .banner-4 {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-#step-4 .rectangle-top,
-#step-4 .rectangle-bottom {
-    position: absolute;
-    width: 25%;
-    height: 40px;
-    background-color: #e0c9a6; /* Màu hình chữ nhật */
-    z-index: 1;
-}
-
-#step-4 .rectangle-top {
-    top: -20px; /* Đẩy hình chữ nhật lên trên */
-}
-
-#step-4 .rectangle-bottom {
-    bottom: -20px; /* Đẩy hình chữ nhật xuống dưới */
-}
-
-#step-4 .main-image {
-    position: relative;
-    z-index: 2; /* Đảm bảo hình ảnh nằm trên hình chữ nhật */
-    max-width: 100%;
-}
-
-
-
-/* Line 2 */
-.container1 .line-2 {
-}
+/*************************************** Line 2 ***************************************/
 
 .container1 .line-2 .btn {
     border: none;
@@ -532,11 +537,12 @@ body {
     font-size: 16px;
     font-weight: 500;
 }
+.banner-2 {
+   margin: 50px 0px;
+}
 
 
-
-
-/* Giao diện mặc định (dành cho laptop) */
+/*************************************** Line 3 ***************************************/
 .container1 .line-3 {
     color: white;
     background-image: url('./asset/img/Img2.png');
@@ -548,15 +554,17 @@ body {
     width: 100%;
 }
 
+
 .container1 .line-3 .btn {
     border: none;
     border-radius: 0px;
-    padding: 12px 20px;
-    margin-top: 50px;
+    padding: 10px;
+    margin-top: auto;
     cursor: pointer;
     font-size: 16px;
     font-weight: 500;
     transition: all 0.3s ease;
+    width: 40%;
 }
 
 .container1 .line-3 .btn:hover {
@@ -573,15 +581,13 @@ body {
 }
 
 .container1 .line-3 .list-service .service-card {
-    width: 600px;
-    height: 45vh;
+    width: 40%;
+    height: 50vh;
+    padding: 40px;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
 }
 
-.container1 .line-3 .list-service .service-card ul {
-    /* margin: 15px 0px; */
-}
 
 .container1 .line-3 .list-service .service-card ul li {
     font-size: 14px;
@@ -598,28 +604,55 @@ body {
     transform: translateY(-5px);
     box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
 }
-/* Line 4 */
+/*************************************** Line 4 ***************************************/
 .container1 .line-4 {
     color: #19195E;
-    margin-top: 35%;
+    margin-top: 40%;
 }
 
-.container1 .line-4 > div ul li {
+.container1 .line-4 .row > div ul {
+    padding: 15px;
+}
+
+.container1 .line-4 .row > div:first-child ul li {
     font-size: 15px;
     color: #19195E;
     padding: 10px;
 }
+.container1 .line-4 .row > div:first-child ul li:hover {
+    background-color: #3E4595; /* Đổi màu nền khi hover */
+    transition: ease 0.3s;
+}
 
+.container1 .line-4 .row > div:first-child ul li:hover a {
+    color: white; /* Đổi màu chữ của thẻ <a> khi hover vào <li> */
+    transition: color 0.3s ease;
+}
 .container1 .line-4 > .row  > div:first-child ul li:first-child {
     background-color: #3E4595;
 }
-.container1 .line-4 > div:first-child ul li:first-child a {
+.container1 .line-4 > .row div:first-child ul li:first-child a {
     color: #ffff;
 }
 
+#step-4 .banner-4 {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
 
-/* CSS cho box-step-3, ẩn mặc định khi trang tải */
-.box-step-3 {
+.container1 .line-4 .row .step:nth-child(8) .row .btn {
+    background-color: #3E4595; 
+    color: white; 
+    font-size: 14px;
+    font-weight: bold;
+    padding: 15px;
+    width: 35%; 
+    border-radius: 0px;
+    font-family: Crimson Text;
+}
+
+/* .box-step-3 {
     position: fixed;
     right: 35px;
     bottom: 10%;
@@ -630,10 +663,9 @@ body {
     padding: 10px;
     box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
     border-radius: 8px;
-    display: none; /* Ẩn mặc định */
+    display: none; 
 }
 
-/* CSS cho nút + */
 #showSurvey {
     position: fixed;
     right: 35px;
@@ -648,15 +680,19 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
-
-
-
+/*************************************** Line 5 ***************************************/
 .container1 .line-5{
     margin-top: 10%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
-/* Footer */
+/*************************************** Line 6 ***************************************/
+
+
+/*************************************** Line Footer ***************************************/
 .footer {
     background-color: #0E0E38;
     color: white;
@@ -677,7 +713,6 @@ body {
     font-weight: bold;
 }
 
-/* Email */
 .email-input input {
     color: #FFF;
     font-family: "Crimson Text";
@@ -685,7 +720,6 @@ body {
     padding-left: 20px;
 }
 
-/* Liên hệ */
 .contact-title {
     color: #FFF;
     font-family: "Crimson Text";
@@ -694,7 +728,6 @@ body {
     text-transform: uppercase;
 }
 
-/* Inquiry */
 .inquiry-title {
     color: #F5F4F0;
     font-family: "Crimson Text";
@@ -702,7 +735,6 @@ body {
     font-weight: 600;
 }
 
-/* Button */
 .btn-start {
     background-color: #3E4595;
     color: #FFF;

@@ -20,4 +20,13 @@ document.addEventListener('DOMContentLoaded', function() {
             surveyBox.style.display = 'none';  // Ẩn surveyBox khi nhấn nút tắt
         });
     }
+
+    // Thêm sự kiện click cho các nút có class '.btn'
+    const btnElements = document.querySelectorAll('.btn');
+    btnElements.forEach(function(btn) {
+        btn.addEventListener('click', function() {
+            // Hiển thị thông báo "Đang chờ cập nhật"
+            alert("Đang chờ cập nhật");
+        });
+    });
 });
