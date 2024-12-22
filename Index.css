@@ -42,3 +42,7 @@ ul{
     padding-left:1rem;
 }
 
+.btn{
+    border: none;
+    border-radius: 0px;
+}

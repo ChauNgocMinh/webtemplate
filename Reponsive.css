@@ -1,7 +1,7 @@
 
 /******************************* PC,LAPTOP ********************************/
 @media (min-width: 1024px){
-
+    
     .navbar-toggler {
         border: none;
         background-color: #f3f3f3;
@@ -186,25 +186,26 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 25%;
+        margin-top: 32%;
     }
     
-    .container1 .line-4 .row > div ul {
-    }
+  
     
-    .container1 .line-4 .row > div:first-child > ul li {
-        color: #19195E;
-        padding: 15px;
+    .container1 .line-4 .row > div:first-child > ul  {
+        padding:0px 15px;
     }
-    .container1 .line-4 .row > div:last-child > ul li{
-        color: #19195E;
-        padding: 15px;
+    .container1 .line-4 .row > div:first-child > ul li{
+        padding: 10px;
     }
     .container1 .line-4 > .row  > div:first-child ul li:first-child {
         background-color: #3E4595;
     }
     .container1 .line-4 > .row div:first-child ul li:first-child a {
         color: #ffff;
+    }
+    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul{
+        margin-top: 25%;
+
     }
 
     /* .container1 .line-4 .row > div:nth-child(1) > ul li:hover {
@@ -432,7 +433,6 @@
         border: none;
         border-radius: 0px;
         cursor: pointer;
-        width: 25%;
         text-align: center;
         padding: 10px 0px;
         background-color: #3E4595;
@@ -449,7 +449,6 @@
         color: var(--Text, #19195E);
         font-size: 55px;
         line-height: 1.2;
-        width: 55%;
     }
     
     .container1 .line-1 .banner-1 {
@@ -526,7 +525,7 @@
     }
     
     .container1 .line-3 .list-service .service-card {
-        width: 32%;
+        width: 100%;
         padding: 25px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease;
@@ -551,7 +550,7 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 25%;
+        margin-top: 60%;
     }
     
     .container1 .line-4 .row > div ul {
@@ -750,19 +749,20 @@
 
     /*************************************** Line 1 ***************************************/
     .container1 .line-1 {
+        position: relative;
         flex-direction: column;
         align-items: center;
         background: url(./asset/img/Img.png) no-repeat center/cover;
         padding: 40px 0;
     }
-
+ 
     .container1 .line-1::before {
         content: "";
         position: absolute;
-        top: 10%;
+        top: 0;
         left: 0;
         width: 100%;
-        height: 28%;
+        height: 100%;
         background-color: #19195E;
         opacity: 0.8;
         z-index: 1;
@@ -782,6 +782,7 @@
     .container1 .line-1 .icon-vector-2 img:last-child {
         position: absolute;
         right: 10%;
+        bottom: 25%;
         width: 10%;
         z-index: 2;
     }
@@ -790,6 +791,10 @@
         background-color: #D3B184;
         color: #19195E;
         z-index: 2;
+    }
+
+    .container1 .line-1 .btn .arrow_outward{
+        content: url('./asset/img/arrow_outward.png');
     }
 
     .container1 .line-1 .banner-1,
@@ -827,12 +832,21 @@
     }
 
     /*************************************** Line 3 ***************************************/
+    
+
     .container1 .line-3 {
-        height: auto;
-        padding: 10% 0;
+        color: white;
+        background-image: url('./asset/img/Img2.png');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        padding: 10% 0px;
+        height: 80vh;
+        width: 100%;
     }
+   
     .container1 .line-3  div:nth-child(2) h3{
-        width: 75% !important;
+        width: 100% !important;
     }
     .container1 .line-3 .list-service {
         display: flex;
@@ -856,13 +870,17 @@
 
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
+        margin-top: 230%;
     }
-   
-   
-    .container1 .line-4 .row div:first-child {
-        flex-direction: row;
-        color: #19195E;
+    
+    .center {
+        text-align: center;
     }
+    
+    .start {
+        text-align: left;
+    }
+    
     .container1 .line-4 .row #img{
         width: 100%;
         height: auto;
@@ -927,29 +945,28 @@
     
     /*************************************** Line 5 ***************************************/
     .container1 .line-5  {
-        margin-top: 10%;
         justify-content: space-evenly;
         align-items: center;
         text-align: center;
     }
 
-    .container1 .line-5 .row .display-6 {
+    .container1 .line-5  .display-6 {
         font-size: 1.5rem;
     }
 
-    .container1 .line-5 .row > div:first-child,
-    .container1 .line-5 .row > div:last-child {
+    .container1 .line-5  > div:first-child,
+    .container1 .line-5  > div:last-child {
         margin: 30px 5px;
         width: 100%;
         text-align: center;
         justify-items: center;
     }
 
-    .container1 .line-5 .row div:first-child {
+    .container1 .line-5  div:first-child {
         order: 2;
     }
 
-    .container1 .line-5 .row div:last-child {
+    .container1 .line-5  div:last-child {
         order: 1;
     }
 

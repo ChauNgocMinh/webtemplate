@@ -29,4 +29,19 @@ document.addEventListener('DOMContentLoaded', function() {
             alert("Đang chờ cập nhật");
         });
     });
+
+    // Lắng nghe sự kiện thay đổi kích thước cửa sổ (resize)
+    window.addEventListener('resize', function() {
+        // Kiểm tra nếu kích thước cửa sổ nhỏ hơn 740px (màn hình di động)
+        if (window.innerWidth < 740) {
+            // Thay đổi nội dung của thẻ <h3>
+            document.querySelector('.change').innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
+        if (window.innerWidth < 1023) {
+            // Thay đổi nội dung của thẻ <h3>
+            document.querySelector('.change').innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
+        } else {
+            // Nếu kích thước cửa sổ lớn hơn 740px, giữ nguyên nội dung ban đầu
+            document.querySelector('.change').innerHTML = 'Giải pháp định giá toàn diện cho doanh nghiệp của bạn';
+        }
+    });
 });
