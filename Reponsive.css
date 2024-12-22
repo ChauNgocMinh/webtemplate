@@ -1,6 +1,7 @@
 
+
 /******************************* PC,LAPTOP ********************************/
-@media (min-width: 1024px){
+@media (min-width: 1024px) and (max-width:1920px){
     
     .navbar-toggler {
         border: none;
@@ -117,10 +118,19 @@
         font-weight: 500;
     }
     .banner-2 {
-       align-content: center;
-       margin: 35px 0px;
+        position: relative;
+        align-content: center;
+        margin: 12% 0px;
     }
-    
+    .rectangle{
+        position: absolute;
+        background-color: #D3B184;
+        top: -10%;
+        left: 25%;
+        width: 45%;
+        height: 120%;
+        z-index: -1;
+    }
     
     /*************************************** Line 3 ***************************************/
     .container1 .line-3 {
@@ -192,7 +202,7 @@
   
     
     .container1 .line-4 .row > div:first-child > ul  {
-        padding:0px 15px;
+        padding: 15px;
     }
     .container1 .line-4 .row > div:first-child > ul li{
         padding: 10px;
@@ -250,7 +260,7 @@
         color: white; 
         font-size: 14px;
         font-weight: bold;
-        padding: 10px;
+        padding: 15px;
         width: 30%; 
         border-radius: 0px;
         font-family: Crimson Text;
@@ -481,10 +491,19 @@
         font-weight: 500;
     }
     .banner-2 {
-       align-content: center;
-       margin: 35px 0px;
+        position: relative;
+        align-content: center;
+        margin: 12% 0px;
     }
-    
+    .rectangle{
+        position: absolute;
+        background-color: #D3B184;
+        top: -10%;
+        left: 25%;
+        width: 45%;
+        height: 120%;
+        z-index: -1;
+    }
     
     /*************************************** Line 3 ***************************************/
     .container1 .line-3 {
@@ -497,7 +516,6 @@
         height: 80vh;
         width: 100%;
     }
-    
     
     .container1 .line-3 .btn {
         border: none;
@@ -550,7 +568,7 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 60%;
+        margin-top: 70%;
     }
     
     .container1 .line-4 .row > div ul {
@@ -830,7 +848,20 @@
         background-color: #3E4595;
         color: #ffff;
     }
-
+    .banner-2 {
+        position: relative;
+        align-content: center;
+        margin: 12% 0px;
+    }
+    .rectangle{
+        position: absolute;
+        background-color: #D3B184;
+        top: -10%;
+        left: 25%;
+        width: 45%;
+        height: 120%;
+        z-index: -1;
+    }
     /*************************************** Line 3 ***************************************/
     
 
@@ -870,7 +901,7 @@
 
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
-        margin-top: 230%;
+        margin-top: 235%;
     }
     
     .center {
@@ -895,7 +926,9 @@
     }
     .container1 .line-4 .row p {
     }
-
+    .container1 .line-4 .row > div:first-child > ul{
+        padding: 15px;
+    }
     .container1 .line-4 .row > div:first-child > ul li {
         padding: 10px;
     }
@@ -924,6 +957,7 @@
 
     .container1 .line-4 .row .step:nth-child(7) .row > div:first-child {
         order: 1;
+        padding: 15px 10px;
     }
 
     .container1 .line-4 .row .step:nth-child(7) .row div:nth-child(2) {
@@ -936,7 +970,7 @@
         color: white; 
         font-size: 14px;
         font-weight: bold;
-        padding: 5px;
+        padding: 10px;
         margin: 10px 0px;
         width: 100%; 
         border-radius: 0px;

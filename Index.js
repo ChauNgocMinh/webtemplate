@@ -34,14 +34,18 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         // Kiểm tra nếu kích thước cửa sổ nhỏ hơn 740px (màn hình di động)
         if (window.innerWidth < 740) {
-            // Thay đổi nội dung của thẻ <h3>
             document.querySelector('.change').innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
-        if (window.innerWidth < 1023) {
-            // Thay đổi nội dung của thẻ <h3>
+        } 
+        // Kiểm tra nếu kích thước cửa sổ từ 740px đến 1023px (màn hình tablet)
+        else if (window.innerWidth >= 740 && window.innerWidth <= 1023) {
             document.querySelector('.change').innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
-        } else {
-            // Nếu kích thước cửa sổ lớn hơn 740px, giữ nguyên nội dung ban đầu
+        } 
+        else {
+            // Nếu kích thước cửa sổ lớn hơn 1023px, giữ nguyên nội dung ban đầu
             document.querySelector('.change').innerHTML = 'Giải pháp định giá toàn diện cho doanh nghiệp của bạn';
         }
     });
+
+    // Chạy lại sự kiện resize để cập nhật khi tải trang
+    window.dispatchEvent(new Event('resize'));
 });
