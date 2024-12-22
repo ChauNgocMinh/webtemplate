@@ -5,7 +5,6 @@
     
     .navbar-toggler {
         border: none;
-        background-color: #f3f3f3;
     }
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -17,7 +16,7 @@
     }
     /* Cấu hình mặc định */
     .header .nav-menu .nav-item {
-        color: var(--12251-f, #3E4595);
+        color: var(--12251-f, #141B34);
         font-size: 20px;
         font-weight: 400;
         line-height: normal;
@@ -30,7 +29,7 @@
         gap: 15px;
     }
     .header .nav-menu .item-call p {
-        color: #FFF;
+        color: #141B34;
         font-size: 24px;
     }
     .nav-menu .item:last-child {
@@ -201,9 +200,7 @@
     
   
     
-    .container1 .line-4 .row > div:first-child > ul  {
-        padding: 15px;
-    }
+   
     .container1 .line-4 .row > div:first-child > ul li{
         padding: 10px;
     }
@@ -215,18 +212,15 @@
     }
     .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul{
         margin-top: 25%;
-
+    }
+    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul li{
+        padding: 5px;
+    }
+    .container1 .line-4 .row > div:first-child > ul li:hover {
+        background-color: #3E4595;
+        transition: ease 0.3s;
     }
 
-    /* .container1 .line-4 .row > div:nth-child(1) > ul li:hover {
-        background-color: #3E4595; 
-    }
-    
-    .container1 .line-4 > .row  div:first-child ul li:hover a {
-        
-        color: white;
-        transition: color 0.3s ease;
-    } */
 
 
     .container1 .line-4 #img{
@@ -240,21 +234,11 @@
         align-items: center;
         padding: 0px;
     }
-    /* #step-4 .banner-4 {
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding: 0px;
-    } */
+
     .container1 .line-4 .row .step:nth-child(7) div  {
        flex-direction: row;
     }
-    /* .container1 .line-4 .row .step:nth-child(7) div div:last-child {
-        background-color:  #F3EFEA; 
-        height: auto; 
-        z-index: 99999; 
 
-     } */
     .container1 .line-4 .row .step:nth-child(8) .row .btn {
         background-color: #3E4595 ; 
         color: white; 
@@ -378,9 +362,9 @@
 
 /******************************* TABLET ********************************/
 @media (min-width: 740px) and (max-width: 1023px){
+    
     .navbar-toggler {
         border: none;
-        background-color: #f3f3f3;
     }
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
@@ -392,7 +376,7 @@
     }
     /* Cấu hình mặc định */
     .header .nav-menu .nav-item {
-        color: var(--12251-f, #3E4595);
+        color: var(--12251-f, #141B34);
         font-size: 20px;
         font-weight: 400;
         line-height: normal;
@@ -405,13 +389,14 @@
         gap: 15px;
     }
     .header .nav-menu .item-call p {
-        color: #FFF;
+        color: #141B34;
         font-size: 24px;
     }
     .nav-menu .item:last-child {
         background-color: #3E4595;
         padding: 0 30px;
     }
+    
     
     .container1 .line-1 #img,
     .container1 .line-2 #img,
@@ -589,15 +574,11 @@
         color: #ffff;
     }
 
-    /* .container1 .line-4 .row > div:nth-child(1) > ul li:hover {
-        background-color: #3E4595; 
+ 
+    .container1 .line-4 .row > div:first-child > ul li:hover {
+        background-color: #3E4595;
+        transition: ease 0.3s;
     }
-    
-    .container1 .line-4 > .row  div:first-child ul li:hover a {
-        
-        color: white;
-        transition: color 0.3s ease;
-    } */
 
 
     .container1 .line-4 #img{
@@ -611,21 +592,11 @@
         align-items: center;
         padding: 0px;
     }
-    /* #step-4 .banner-4 {
-        position: relative;
-        display: flex;
-        align-items: center;
-        padding: 0px;
-    } */
+  
     .container1 .line-4 .row .step:nth-child(7) div  {
        flex-direction: row;
     }
-    /* .container1 .line-4 .row .step:nth-child(7) div div:last-child {
-        background-color:  #F3EFEA; 
-        height: auto; 
-        z-index: 99999; 
-
-     } */
+   
     .container1 .line-4 .row .step:nth-child(8) .row .btn {
         background-color: #3E4595 ; 
         color: white; 
@@ -749,9 +720,41 @@
 
 /******************************* MOBILE ********************************/
 @media (max-width: 740px){
-    ul {
-        padding-left: 1rem;
+   
+    .navbar-toggler {
+        border: none;
     }
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .navbar-nav .nav-link {
+        font-size: 16px;
+        font-weight: 500;
+        padding: 10px;
+    }
+    /* Cấu hình mặc định */
+    .header .nav-menu .nav-item {
+        color: var(--12251-f, #141B34);
+        font-size: 20px;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 1px;
+    }
+    .header .nav-menu .item-call {
+        display: flex;
+        height: 93px;
+        align-items: center;
+        gap: 15px;
+    }
+    .header .nav-menu .item-call p {
+        color: #141B34;
+        font-size: 24px;
+    }
+    .nav-menu .item:last-child {
+        background-color: #3E4595;
+        padding: 0 30px;
+    }
+    
 
     /*************************************** Line chung ***************************************/
 
@@ -924,13 +927,16 @@
         justify-content: center;
         padding: 0px;
     }
-    .container1 .line-4 .row p {
-    }
+
     .container1 .line-4 .row > div:first-child > ul{
         padding: 15px;
     }
     .container1 .line-4 .row > div:first-child > ul li {
         padding: 10px;
+    }
+    .container1 .line-4 .row > div:first-child > ul li:hover {
+        background-color: #3E4595;
+        transition: ease 0.3s;
     }
     .container1 .line-4 .row > div:last-child > ul li{
         padding: 5px;
