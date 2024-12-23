@@ -1,6 +1,7 @@
-/******************************* PC,LAPTOP ********************************/
-@media (min-width: 1024px) and (max-width:1920px){
-    
+/* ****************************** PC, LAPTOP ****************************** */
+@media (min-width: 1024px) and (max-width: 1920px) {
+
+    /* Navbar */
     .navbar-toggler {
         border: none;
     }
@@ -12,13 +13,17 @@
         font-weight: 500;
         padding: 10px;
     }
-    /* Cấu hình mặc định */
     .header .nav-menu .nav-item {
         color: var(--12251-f, #141B34);
         font-size: 20px;
         font-weight: 400;
         line-height: normal;
         letter-spacing: 1px;
+    }
+    
+    .header .nav-menu ul .item ul li a:hover {
+        color:brown;
+        transition: ease 0.3s;
     }
     .header .nav-menu .item-call {
         display: flex;
@@ -27,30 +32,28 @@
         gap: 15px;
     }
     .header .nav-menu .item-call p {
-        color: #ffff;
+        color: #fff;
         font-size: 24px;
     }
     .nav-menu .item:last-child {
         background-color: #3E4595;
         padding: 0 30px;
     }
-    
+
+    /* Images */
     .container1 .line-1 #img,
     .container1 .line-2 #img,
     .container1 .line-3 #img,
-    .container1 .line-6 #img{
+    .container1 .line-6 #img {
         width: 100%;
         height: auto;
-        padding: 0px;
+        padding: 0;
     }
-    
 
-    
     /*************************************** Line 1 ***************************************/
     .container1 {
         font-size: 16px;
     }
-    
     .container1 .line-1 {
         background-color: #F5F4F0;
         margin-bottom: 50px;
@@ -60,66 +63,59 @@
         justify-content: space-between;
         position: relative;
     }
-    
     .container1 .line-1 .btn {
         border: none;
-        border-radius: 0px;
+        border-radius: 0;
         cursor: pointer;
         width: 25%;
         text-align: center;
-        padding: 10px 0px;
+        padding: 10px 0;
         background-color: #3E4595;
-        color: #ffff;
+        color: #fff;
     }
-    
     .container1 .line-1 .title {
         color: var(--12251-f, #3E4595);
         font-size: 24px;
         margin-bottom: 10px;
     }
-    
     .container1 .line-1 .content {
         color: var(--Text, #19195E);
         font-size: 55px;
         line-height: 1.2;
         width: 55%;
     }
-    
     .container1 .line-1 .banner-1 {
         position: relative;
     }
-    
-    .container1 .line-1 .banner-11  {
+    .container1 .line-1 .banner-11 {
         position: absolute;
         display: block;
-        
         background-color: #3E4595;
-        color: #ffff;
+        color: #fff;
         width: 25%;
         bottom: -10%;
         left: 40%;
-        padding: 20px 0px ;
+        padding: 20px 0;
     }
-    
+
     /*************************************** Line 2 ***************************************/
-    
     .container1 .line-2 .btn {
         border: none;
-        border-radius: 0px;
+        border-radius: 0;
         padding: 12px 20px;
-        margin: 30px 0px;
+        margin: 30px 0;
         cursor: pointer;
         background-color: #3E4595;
-        color: #ffff;
+        color: #fff;
         font-size: 16px;
         font-weight: 500;
     }
     .banner-2 {
         position: relative;
         align-content: center;
-        margin: 12% 0px;
+        margin: 12% 0;
     }
-    .rectangle{
+    .rectangle {
         position: absolute;
         background-color: #D3B184;
         top: -10%;
@@ -128,7 +124,7 @@
         height: 120%;
         z-index: -1;
     }
-    
+
     /*************************************** Line 3 ***************************************/
     .container1 .line-3 {
         color: white;
@@ -136,15 +132,13 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        padding: 5% 0px;
+        padding: 5% 0;
         height: 80vh;
         width: 100%;
     }
-    
-    
     .container1 .line-3 .btn {
         border: none;
-        border-radius: 0px;
+        border-radius: 0;
         padding: 10px;
         margin-top: auto;
         cursor: pointer;
@@ -153,11 +147,9 @@
         transition: all 0.3s ease;
         width: 40%;
     }
-    
     .container1 .line-3 .btn:hover {
         transform: scale(1.05);
     }
-    
     .container1 .line-3 .list-service {
         position: absolute;
         margin-top: 5%;
@@ -166,165 +158,147 @@
         justify-content: center;
         gap: 20px;
     }
-    
     .container1 .line-3 .list-service .service-card {
         width: 32%;
         padding: 25px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease;
     }
-    
-    
     .container1 .line-3 .list-service .service-card ul li {
         font-size: 14px;
     }
-    
-    .container1 .line-3 .list-service .service-card ul li:first-child {
-        font-size: 26px;
+    .container1 .line-3 .list-service .service-card > p {
+        font-size: 22px;
+        text-transform: uppercase;
         font-weight: 500;
         list-style: none;
         margin-bottom: 15px;
     }
-    
     .container1 .line-3 .list-service .service-card:hover {
         transform: translateY(-5px);
         box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.2);
     }
+
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
         margin-top: 32%;
     }
-    
-    .container1 .line-4 .row > div:last-child{
+    .container1 .line-4 .row > div:last-child {
         margin-top: 8%;
     }
-       
-    .container1 .line-4 .row > div:first-child > ul{
+    .container1 .line-4 .row > div:first-child > ul {
         padding: 15px;
     }
-    .container1 .line-4 .row > div:first-child > ul li{
+    .container1 .line-4 .row > div:first-child > ul li {
         padding: 10px;
     }
-    .container1 .line-4 > .row  > div:first-child ul li:first-child {
+    .container1 .line-4 > .row > div:first-child ul li:first-child {
         background-color: #3E4595;
     }
     .container1 .line-4 > .row div:first-child ul li:first-child a {
-        color: #ffff !important;
+        color: #fff !important;
     }
-    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul{
+    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul {
         margin-top: 25%;
     }
-    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul li{
+    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul li {
         padding: 5px;
     }
-  
     .container1 .line-4 .row > div:first-child > ul li:hover a {
         color: black;
         transition: ease 0.3s;
     }
-
-
-
-    .container1 .line-4 #img{
+    .container1 .line-4 #img {
         width: 100%;
         height: auto;
-        padding: 0px;
+        padding: 0;
     }
     .container1 .line-4 .step {
         position: relative;
         display: flex;
         align-items: center;
-        padding: 0px;
+        padding: 0;
     }
-
-    .container1 .line-4 .row .step:nth-child(7) div  {
-       flex-direction: row;
+    .container1 .line-4 .row .step:nth-child(7) div {
+        flex-direction: row;
     }
-
     .container1 .line-4 .row .step:nth-child(8) .row .btn {
-        background-color: #3E4595 ; 
-        color: white; 
+        background-color: #3E4595;
+        color: white;
         font-size: 14px;
         font-weight: bold;
         padding: 15px;
-        width: 30%; 
-        border-radius: 0px;
+        width: 30%;
+        border-radius: 0;
         font-family: Crimson Text;
     }
-    
-    /* .box-step-3 {
-        position: fixed;
-        right: 35px;
-        bottom: 10%;
-        background-color: #F3EFEA;
-        width: 300px;
-        height: auto;
-        z-index: 99999;
-        padding: 10px;
-        box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-        border-radius: 8px;
-        display: none; 
-    }
-    
-    #showSurvey {
-        position: fixed;
-        right: 35px;
-        bottom: 10%;
-        background-color: #3E4595;
-        color: white;
-        border: none;
-        border-radius: 50%;
-        width: 50px;
-        height: 50px;
-        font-size: 30px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    } */
-    
     /*************************************** Line 5 ***************************************/
-    .container1 .line-5{
-        margin-top: 10%;
-        justify-content: space-evenly;
+    .container1 .line-5 {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5%;
+        text-align: center;
+    }
+
+    .container1 .line-5 img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0PX; /* Làm mềm các góc ảnh nếu cần */
+        transition: transform 0.3s ease-in-out; /* Hiệu ứng khi hover */
+    }
+
+    .container1 .line-5 img:hover {
+        transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+        cursor: pointer;
+    }
+
+    .container1 .line-5 p {
+        font-family: "Crimson Text", serif;
+        font-size: 18px;
+        font-weight: 400;
+        color: #333;
+        margin-top: 10px;
+    }
+
+    /*************************************** Line 6 ***************************************/
+    .container1 .line-6 {
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
         align-items: center;
         text-align: center;
     }
-    /*************************************** Line 6 ***************************************/
-    
-    
-    
-    
-    
-    
+
     /*************************************** Line Footer ***************************************/
     .footer {
         background-color: #0E0E38;
         color: white;
-        height: auto;
-        width: 100%;
-        font-size: 12px;
         padding: 3rem 0;
+        font-size: 12px;
+        width: 100%;
     }
-    
+
     .footer .footer-2 {
         list-style: none;
         padding: 0;
         margin: 0;
     }
-    
+
     .footer .footer-2 li > p:first-child {
         font-size: 20px;
         font-weight: bold;
     }
-    
+
     .email-input input {
         color: #FFF;
         font-family: "Crimson Text";
-        padding: 12px 0px;
-        padding-left: 20px;
+        padding: 12px 0px 12px 20px;
     }
-    
+
     .contact-title {
         color: #FFF;
         font-family: "Crimson Text";
@@ -332,36 +306,33 @@
         font-weight: 600;
         text-transform: uppercase;
     }
-    
+
     .inquiry-title {
         color: #F5F4F0;
         font-family: "Crimson Text";
         font-size: 40px;
         font-weight: 600;
     }
-    
+
     .btn-start {
         background-color: #3E4595;
         color: #FFF;
         width: 100px;
-        right: 10px;
-        top:8px;
-        height: auto;
         font-size: 16px;
+        padding: 3px;
         border: 0px;
         cursor: pointer;
         transition: all 0.3s ease-in-out;
-        padding: 3px;
     }
-    
+
     .btn-start:hover {
         background-color: #FFF;
         color: #3E4595;
         border: 0px;
-    }    
+    }
+
+
 }
-
-
 /******************************* TABLET ********************************/
 @media (min-width: 740px) and (max-width: 1023px){
     
@@ -541,7 +512,7 @@
         font-size: 14px;
     }
     
-    .container1 .line-3 .list-service .service-card ul li:first-child {
+    .container1 .line-3 .list-service .service-card p {
         font-size: 26px;
         font-weight: 500;
         list-style: none;
@@ -646,6 +617,17 @@
         justify-content: space-evenly;
         align-items: center;
         text-align: center;
+    }
+    .container1 .line-5 img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0PX; /* Làm mềm các góc ảnh nếu cần */
+        transition: transform 0.3s ease-in-out; /* Hiệu ứng khi hover */
+    }
+
+    .container1 .line-5 img:hover {
+        transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+        cursor: pointer;
     }
     /*************************************** Line 6 ***************************************/
     
@@ -894,7 +876,7 @@
         padding: 20px;
     }
 
-    .container1 .line-3 .list-service .service-card ul li:first-child {
+    .container1 .line-3 .list-service .service-card  p{
         font-size: 20px;
     }
 
@@ -992,7 +974,18 @@
         align-items: center;
         text-align: center;
     }
+    .container1 .line-5 img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 0PX; /* Làm mềm các góc ảnh nếu cần */
+        transition: transform 0.3s ease-in-out; /* Hiệu ứng khi hover */
+    }
 
+    .container1 .line-5 img:hover {
+        transform: scale(1.1); /* Phóng to hình ảnh khi hover */
+        cursor: pointer;
+    }
+    
     .container1 .line-5  .display-6 {
         font-size: 1.5rem;
     }
