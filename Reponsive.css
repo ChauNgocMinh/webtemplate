@@ -1,5 +1,3 @@
-
-
 /******************************* PC,LAPTOP ********************************/
 @media (min-width: 1024px) and (max-width:1920px){
     
@@ -29,7 +27,7 @@
         gap: 15px;
     }
     .header .nav-menu .item-call p {
-        color: #141B34;
+        color: #ffff;
         font-size: 24px;
     }
     .nav-menu .item:last-child {
@@ -198,9 +196,13 @@
         margin-top: 32%;
     }
     
-  
-    
-   
+    .container1 .line-4 .row > div:last-child{
+        margin-top: 8%;
+    }
+       
+    .container1 .line-4 .row > div:first-child > ul{
+        padding: 15px;
+    }
     .container1 .line-4 .row > div:first-child > ul li{
         padding: 10px;
     }
@@ -208,7 +210,7 @@
         background-color: #3E4595;
     }
     .container1 .line-4 > .row div:first-child ul li:first-child a {
-        color: #ffff;
+        color: #ffff !important;
     }
     .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul{
         margin-top: 25%;
@@ -216,8 +218,9 @@
     .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul li{
         padding: 5px;
     }
-    .container1 .line-4 .row > div:first-child > ul li:hover {
-        background-color: #3E4595;
+  
+    .container1 .line-4 .row > div:first-child > ul li:hover a {
+        color: black;
         transition: ease 0.3s;
     }
 
@@ -248,7 +251,6 @@
         width: 30%; 
         border-radius: 0px;
         font-family: Crimson Text;
-        margin-left:10px;
     }
     
     /* .box-step-3 {
@@ -553,7 +555,7 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 70%;
+        margin-top: 90%;
     }
     
     .container1 .line-4 .row > div ul {
@@ -571,14 +573,13 @@
         background-color: #3E4595;
     }
     .container1 .line-4 > .row div:first-child ul li:first-child a {
-        color: #ffff;
+        color: #ffff !important;
     }
-
- 
-    .container1 .line-4 .row > div:first-child > ul li:hover {
-        background-color: #3E4595;
+    .container1 .line-4 > .row  > div:first-child ul li:hover a {
+        color: black;
         transition: ease 0.3s;
     }
+
 
 
     .container1 .line-4 #img{
@@ -905,6 +906,7 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         margin-top: 235%;
+        color: #19195E;
     }
     
     .center {
@@ -932,12 +934,9 @@
         padding: 15px;
     }
     .container1 .line-4 .row > div:first-child > ul li {
-        padding: 10px;
+        padding: 5px;
     }
-    .container1 .line-4 .row > div:first-child > ul li:hover {
-        background-color: #3E4595;
-        transition: ease 0.3s;
-    }
+
     .container1 .line-4 .row > div:last-child > ul li{
         padding: 5px;
     }
@@ -964,6 +963,10 @@
     .container1 .line-4 .row .step:nth-child(7) .row > div:first-child {
         order: 1;
         padding: 15px 10px;
+    }
+    .container1 .line-4 .row > div:first-child > ul li:hover a {
+        color: black;
+        transition: ease 0.3s;
     }
 
     .container1 .line-4 .row .step:nth-child(7) .row div:nth-child(2) {
@@ -1011,7 +1014,7 @@
     }
 
     /*************************************** Line 6 ***************************************/
-    .container1 .line-6 .row > ul li {
+    .container1 .line-6 > ul li {
         margin: 10px 0;
     }
 

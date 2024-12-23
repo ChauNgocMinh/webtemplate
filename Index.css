@@ -41,8 +41,13 @@ body {
 ul{
     padding-left:1rem;
 }
-
+a{
+    color: #19195E;
+}
 .btn{
     border: none;
     border-radius: 0px;
+}
+.icon-tick{
+  
 }
