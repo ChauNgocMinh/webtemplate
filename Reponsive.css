@@ -1,5 +1,5 @@
 /* ****************************** PC, LAPTOP ****************************** */
-@media (min-width: 1024px) and (max-width: 1920px) {
+@media  (min-width: 1366px) {
 
     /* Navbar */
     .navbar-toggler {
@@ -182,7 +182,7 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 32%;
+        margin-top: 35%;
     }
     .container1 .line-4 .row > div:last-child {
         margin-top: 8%;
@@ -257,7 +257,7 @@
 
     .container1 .line-5 p {
         font-family: "Crimson Text", serif;
-        font-size: 18px;
+        font-size: 24px;
         font-weight: 400;
         color: #333;
         margin-top: 10px;
@@ -333,8 +333,9 @@
 
 
 }
+
 /******************************* TABLET ********************************/
-@media (min-width: 740px) and (max-width: 1023px){
+@media (min-width: 740px) and (max-width: 1366px){
     
     .navbar-toggler {
         border: none;
@@ -526,7 +527,7 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 90%;
+        margin-top: 100%;
     }
     
     .container1 .line-4 .row > div ul {
@@ -702,7 +703,7 @@
 
 
 /******************************* MOBILE ********************************/
-@media (max-width: 740px){
+@media (min-width: 375px) and (max-width: 740px) {
    
     .navbar-toggler {
         border: none;
@@ -872,6 +873,7 @@
     }
 
     .container1 .line-3 .list-service .service-card {
+        background-color: #3E4595;
         width: 100% !important;
         padding: 20px;
     }
@@ -887,7 +889,7 @@
 
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
-        margin-top: 235%;
+        margin-top: 250%;
         color: #19195E;
     }
     
