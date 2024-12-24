@@ -67,15 +67,16 @@ a{
 
 .popup-content {
     position: relative;
-    background: #ffffff; /* Nền trắng cho popup */
+    background-color:#3E4595; /* Nền trắng cho popup */
+    color: #ffff;
     border-radius: 10px; /* Góc bo tròn mượt hơn */
     padding: 20px;
     max-width: 600px; /* Chiều rộng tối đa cụ thể */
     max-height: 80%; /* Giới hạn chiều cao tối đa */
     overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung quá dài */
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Đổ bóng đẹp hơn */
-    text-align: center; /* Căn giữa nội dung */
     animation: popup-appear 0.3s ease-in-out; /* Hiệu ứng mở popup */
+    font-size: 25px;
 }
 
 .close-btn {
