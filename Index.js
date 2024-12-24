@@ -1,119 +1,81 @@
-// Hàm hiển thị popup "NHẬN TƯ VẤN MIỄN PHÍ"
-function showTuVanPopup() {
-    const popup = document.getElementById('nhantuvan-popup');
-    if (popup) {
-        popup.style.display = 'flex';
-    }
-}
+document.addEventListener('DOMContentLoaded', () => {
+    // Hàm hiển thị/ẩn popup
+    const togglePopupVisibility = (popupId, show) => {
+        const popup = document.getElementById(popupId);
+        if (popup) popup.style.display = show ? 'flex' : 'none';
+    };
 
-// Hàm đóng popup "NHẬN TƯ VẤN MIỄN PHÍ"
-function closeTuVanPopup() {
-    const popup = document.getElementById('nhantuvan-popup');
-    if (popup) {
-        popup.style.display = 'none';
-    }
-}
+    // Cập nhật nội dung theo kích thước màn hình
+    const updateContentBasedOnWidth = () => {
+        const changeElement = document.querySelector('.change');
+        if (!changeElement) return;
+        const content = window.innerWidth < 740
+            ? 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH'
+            : window.innerWidth <= 1023
+            ? 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH'
+            : 'Giải pháp định giá toàn diện cho doanh nghiệp của bạn';
+        changeElement.innerHTML = content;
+    };
 
-// Hàm hiển thị popup "TÌM HIỂU THÊM"
-function showPopup() {
-    const popup = document.getElementById('timhieuthem-popup');
-    if (popup) {
-        popup.style.display = 'flex';
-    }
-}
+    // Quản lý carousel testimonials
+    const manageCarouselTestimonials = () => {
+        const carouselElement = document.querySelector('#testimonialCarousel');
+        if (!carouselElement) return;
 
-// Hàm đóng popup "TÌM HIỂU THÊM"
-function closePopup() {
-    const popup = document.getElementById('timhieuthem-popup');
-    if (popup) {
-        popup.style.display = 'none';
-    }
-}
+        const prevButton = carouselElement.querySelector('.carousel-control-prev');
+        const nextButton = carouselElement.querySelector('.carousel-control-next');
 
-// Hàm cập nhật nội dung khi thay đổi kích thước cửa sổ
-const updateContentBasedOnWidth = () => {
-    const changeElement = document.querySelector('.change');
-    if (!changeElement) return;
-    if (window.innerWidth < 740) {
-        changeElement.innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
-    } else if (window.innerWidth <= 1023) {
-        changeElement.innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
-    } else {
-        changeElement.innerHTML = 'Giải pháp định giá toàn diện cho doanh nghiệp của bạn';
-    }
-};
+        // Ngừng sự kiện cuộn của carousel
+        carouselElement.addEventListener('touchstart', (e) => {
+            e.preventDefault();
+        }, { passive: false });
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Lấy các phần tử HTML cần sử dụng
-    const changeElement = document.querySelector('.change');
-    const showSurveyButton = document.getElementById('showSurvey');
-    const surveyBox = document.getElementById('boxStep3');
-    const closeSurveyButton = document.getElementById('closeSurvey');
-    const btnFindOutMore = document.querySelector('.btn');
-    const recruitmentLink = document.getElementById('popup-tuyendung');
-    const maintenancePopup = document.getElementById('timhieuthem-popup');
-    const recruitmentPopup = document.getElementById('tuyendung-popup');
-    const closePopupButtons = document.querySelectorAll('.popup-content .close-btn');
-    const tuVanButton = document.querySelector('.btn.px-4.py-3.fw-bold');
-    const tuVanCloseButton = document.querySelector('#nhantuvan-popup .close-btn');
-    
-    // Cập nhật nội dung khi tải trang và khi thay đổi kích thước cửa sổ
+        // Gán sự kiện khi nhấn nút chuyển slide
+        prevButton?.addEventListener('click', () => {
+            console.log('Chuyển về slide trước');
+        });
+
+        nextButton?.addEventListener('click', () => {
+            console.log('Chuyển tới slide tiếp theo');
+        });
+
+        // Cập nhật nội dung slide khi có sự kiện chuyển slide
+        carouselElement.addEventListener('slid.bs.carousel', (e) => {
+            console.log('Slide hiện tại:', e.relatedTarget);
+        });
+    };
+
+    // Hàm gán sự kiện cho các phần tử
+    const assignEvent = (selector, event, handler) => {
+        const elements = document.querySelectorAll(selector);
+        elements.forEach(element => element.addEventListener(event, handler));
+    };
+
+    // Sự kiện resize và cập nhật nội dung
     window.addEventListener('resize', updateContentBasedOnWidth);
     updateContentBasedOnWidth();
 
-    // Hiển thị hoặc ẩn các popup
-    const togglePopupVisibility = (popup, show) => {
-        if (popup) {
-            popup.style.display = show ? 'flex' : 'none';
-        }
-    };
-
-    // Hiển thị popup bảo trì khi nhấn vào nút "TÌM HIỂU THÊM"
-    if (btnFindOutMore) {
-        btnFindOutMore.addEventListener('click', () => togglePopupVisibility(maintenancePopup, true));
-    }
-
-    // Hiển thị popup tuyển dụng khi nhấn vào mục "TUYỂN DỤNG"
-    if (recruitmentLink) {
-        recruitmentLink.addEventListener('click', (event) => {
-            event.preventDefault(); // Ngăn không chuyển trang
-            togglePopupVisibility(recruitmentPopup, true);
-        });
-    }
-
-    // Đóng popup khi nhấn vào bất kỳ nút "Đóng"
-    closePopupButtons.forEach(button => {
-        button.addEventListener('click', () => {
-            togglePopupVisibility(maintenancePopup, false);
-            togglePopupVisibility(recruitmentPopup, false);
-        });
+    // Popup "TÌM HIỂU THÊM" và "TUYỂN DỤNG"
+    assignEvent('.btn', 'click', () => togglePopupVisibility('timhieuthem-popup', true));
+    assignEvent('#popup-tuyendung', 'click', (e) => {
+        e.preventDefault();
+        togglePopupVisibility('tuyendung-popup', true);
     });
 
-    // Sự kiện hiển thị hoặc ẩn hộp khảo sát
-    if (showSurveyButton && surveyBox && closeSurveyButton) {
-        showSurveyButton.addEventListener('click', () => surveyBox.style.display = 'block');
-        closeSurveyButton.addEventListener('click', () => surveyBox.style.display = 'none');
-    }
+    // Đóng popup
+    assignEvent('.popup-content .close-btn', 'click', () => {
+        togglePopupVisibility('timhieuthem-popup', false);
+        togglePopupVisibility('tuyendung-popup', false);
+    });
 
-    // Hiển thị popup "NHẬN TƯ VẤN MIỄN PHÍ"
-    if (tuVanButton) {
-        tuVanButton.addEventListener('click', showTuVanPopup);
-    }
+    // Hộp khảo sát
+    assignEvent('#showSurvey', 'click', () => togglePopupVisibility('boxStep3', true));
+    assignEvent('#closeSurvey', 'click', () => togglePopupVisibility('boxStep3', false));
 
-    // Đóng popup "NHẬN TƯ VẤN MIỄN PHÍ"
-    if (tuVanCloseButton) {
-        tuVanCloseButton.addEventListener('click', closeTuVanPopup);
-    }
-    
-    // Thêm sự kiện cho nút "TÌM HIỂU THÊM"
-    const btnFindOutMorePopup = document.querySelector('.btn-findout-more');
-    if (btnFindOutMorePopup) {
-        btnFindOutMorePopup.addEventListener('click', showPopup);
-    }
+    // Popup "NHẬN TƯ VẤN MIỄN PHÍ"
+    assignEvent('.btn.px-4.py-3.fw-bold', 'click', () => togglePopupVisibility('nhantuvan-popup', true));
+    assignEvent('#nhantuvan-popup .close-btn', 'click', () => togglePopupVisibility('nhantuvan-popup', false));
 
-    // Thêm sự kiện cho nút "Đóng" của popup "TÌM HIỂU THÊM"
-    const closeFindOutMorePopup = document.querySelector('#timhieuthem-popup .close-btn');
-    if (closeFindOutMorePopup) {
-        closeFindOutMorePopup.addEventListener('click', closePopup);
-    }
+    // Kích hoạt chức năng quản lý carousel
+    manageCarouselTestimonials();
 });

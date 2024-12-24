@@ -231,10 +231,11 @@
         font-size: 14px;
         font-weight: bold;
         padding: 15px;
-        width: 30%;
+        width: 35%;
         border-radius: 0;
         font-family: Crimson Text;
     }
+    
     /*************************************** Line 5 ***************************************/
     .container1 .line-5 {
         display: flex;
@@ -579,7 +580,7 @@
         font-size: 14px;
         font-weight: bold;
         padding: 15px;
-        width: 30%;
+        width: 35%;
         border-radius: 0;
         font-family: Crimson Text;
     }
@@ -920,7 +921,7 @@
         font-size: 14px;
         font-weight: bold;
         padding: 10px;
-        width: 30%; 
+        width: 35%; 
         border-radius: 0px;
         font-family: Crimson Text;
         margin-left:10px;
@@ -1305,7 +1306,6 @@
 
 
     .container1 .line-4 .row .step:nth-child(7) .row div:nth-child(2) {
-        width: 100%;
         height: auto;
     }
 
@@ -1691,7 +1691,6 @@
 
 
     .container1 .line-4 .row .step:nth-child(7) .row div:nth-child(2) {
-        width: 100%;
         height: auto;
     }
 
@@ -2078,7 +2077,6 @@
 
 
     .container1 .line-4 .row .step:nth-child(7) .row div:nth-child(2) {
-        width: 100%;
         height: auto;
     }
 
@@ -2465,7 +2463,6 @@
 
 
     .container1 .line-4 .row .step:nth-child(7) .row div:nth-child(2) {
-        width: 100%;
         height: auto;
     }
 

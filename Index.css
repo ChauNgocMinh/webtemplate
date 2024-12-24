@@ -67,9 +67,8 @@ a{
 
 .popup-content {
     position: relative;
-    background-color:#3E4595; /* Nền trắng cho popup */
+    background-color:#5768cd; /* Nền trắng cho popup */
     color: #ffff;
-    border-radius: 10px; /* Góc bo tròn mượt hơn */
     padding: 20px;
     max-width: 600px; /* Chiều rộng tối đa cụ thể */
     max-height: 80%; /* Giới hạn chiều cao tối đa */
@@ -85,7 +84,6 @@ a{
     background-color: #f44336; /* Màu đỏ nổi bật */
     color: #ffffff;
     border: none;
-    border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
     align-self: center;

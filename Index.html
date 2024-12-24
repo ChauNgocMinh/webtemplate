@@ -13,7 +13,7 @@
 
 <!-- Header -->
 <div class="header">
-    <div class="nav-menu d-none d-md-block">
+    <div class="nav-menu d-none d-md-block" style="font-family: Crimson Text;">
         <ul class="m-0 list-item list-unstyled d-flex justify-content-between align-items-center">
             <li class="item">
                 <a href="">
@@ -214,7 +214,7 @@
                     BẢO VỆ GIÁ TRỊ
                     <span class="me-2" style="color: #D3B184;" >TÀI SẢN</span>CỦA BẠN
                     <div>
-                        <button class="btn" onclick="showPopup()">
+                        <button class="btn" data-popup-show="popupId">
                             TÌM HIỂU THÊM
                             <img class="arrow_outward" src="./asset/img/icon_arrow.png" style="width: 15px; height: 15px;">
                         </button>
@@ -225,7 +225,7 @@
                                 <p>Địa chỉ: Tầng 3, Số 20, Đường số 23, Khu Đô Thị Thành Phố Giao Lưu Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội </p>
                                 <p>Điện thoại: 024.6287.2925</p>
                                 <p>Email: contact@ssbvietnam.vn</p>
-                                <button class="close-btn" onclick="closePopup()">Đóng</button>
+                                <button class="close-btn" data-popup-close="popupId">Đóng</button>
                             </div>
                         </div>
                         
@@ -274,7 +274,7 @@
                     <div style="color: #19195E; font-family: 'Source Sans Pro'; font-size: 14px;">
                         Công ty TNHH Định Giá SSB Việt Nam (SSBVietNam) là đơn vị hàng đầu trong lĩnh vực thẩm định giá và tư vấn tài chính tại Việt Nam, với hơn một thập kỷ kinh nghiệm và đội ngũ chuyên gia giàu kiến thức. SSBVietNam cung cấp dịch vụ định giá chính xác, minh bạch cho nhiều loại tài sản, từ đất đai, doanh nghiệp đến các dự án tài chính phức tạp, hướng đến tối ưu giá trị cho khách hàng. Với phương châm "Giá trị của khách hàng là thành công của chúng tôi". SSBVietNam cam kết đồng hành cùng khách hàng trong mọi quyết định tài chính.
                     </div>
-                    <button class="btn px-4 py-3 fw-bold" onclick="showTuVanPopup()">
+                    <button class="btn px-4 py-3 fw-bold" data-popup-show="popupId">
                         NHẬN TƯ VẤN MIỄN PHÍ
                         <img src="./asset/img/icon_tick.png" class="icon-tick">
                     </button>
@@ -286,7 +286,7 @@
                             <p>Địa chỉ: Tầng 3, Số 20, Đường số 23, Khu Đô Thị Thành Phố Giao Lưu Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội </p>
                             <p>Điện thoại: 024.6287.2925</p>
                             <p>Email: contact@ssbvietnam.vn</p>
-                            <button class="close-btn" onclick="closeTuVanPopup()">Đóng</button>
+                            <button class="close-btn" data-popup-close="popupId">Đóng</button>
                         </div>
                     </div>
                     
@@ -318,21 +318,24 @@
                         <li>Tư vấn xác định giá đất phục vụ cho việc tính tiền sử dụng đất, tiền thuê đất khi Nhà nước giao đất, cho thuê đất</li>
                     </ul>
 
-                    <button  class="btn fw-bold " style="background-color: #D3B184; color:#19195E;" onclick="showTuVanPopup()">
-                        NHẬN TƯ VẤN 
-                        <img src="./asset/img/arrow_outward22.png" class="icon-tick">
-                    </button>
-                    
-                    <!-- Popup Nhận Tư Vấn -->
-                    <div id="nhantuvan-popup" class="popup-overlay" style="display: none;">
-                        <div class="popup-content">
-                            <p class="contact-title"><strong>Liên hệ</strong></p>
-                            <p>Địa chỉ: Tầng 3, Số 20, Đường số 23, Khu Đô Thị Thành Phố Giao Lưu Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội </p>
-                            <p>Điện thoại: 024.6287.2925</p>
-                            <p>Email: contact@ssbvietnam.vn</p>
-                            <button class="close-btn" onclick="closeTuVanPopup()">Đóng</button>
-                        </div>
+                <!-- Nút để hiển thị popup -->
+                <button class="btn fw-bold" style="background-color: #D3B184; color:#19195E;" data-popup-show="nhantuvan-popup">
+                    NHẬN TƯ VẤN 
+                    <img src="./asset/img/arrow_outward22.png" class="icon-tick">
+                </button>
+
+                <!-- Popup Nhận Tư Vấn -->
+                <div id="nhantuvan-popup" class="popup-overlay" style="display: none;">
+                    <div class="popup-content">
+                        <p class="contact-title"><strong>Liên hệ</strong></p>
+                        <p>Địa chỉ: Tầng 3, Số 20, Đường số 23, Khu Đô Thị Thành Phố Giao Lưu Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội </p>
+                        <p>Điện thoại: 024.6287.2925</p>
+                        <p>Email: contact@ssbvietnam.vn</p>
+                        <button class="close-btn" data-popup-close="nhantuvan-popup">Đóng</button>
                     </div>
+                </div>
+
+
                     
                 </div>
         
@@ -347,7 +350,7 @@
                         <li>Thẩm định giá trị là phương tiện vận tải của doanh nghiệp</li>
                         <li>Thẩm định giá trị là giá trị sở hữu trí tuệ về công nghệ, quy trình kinh doanh hoặc sáng chế</li>
                     </ul>
-                    <button class="btn fw-bold " style="background-color: #3E4595; color: white;" onclick="showTuVanPopup()">
+                    <button class="btn fw-bold " style="background-color: #3E4595; color: white;"  data-popup-show="popupId">
                         NHẬN TƯ VẤN
                         <img src="./asset/img/icon_tick.png" class="icon-tick">
                     </button>
@@ -358,7 +361,7 @@
                             <p>Địa chỉ: Tầng 3, Số 20, Đường số 23, Khu Đô Thị Thành Phố Giao Lưu Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội </p>
                             <p>Điện thoại: 024.6287.2925</p>
                             <p>Email: contact@ssbvietnam.vn</p>
-                            <button class="close-btn" onclick="closeTuVanPopup()">Đóng</button>
+                            <button class="close-btn" data-popup-close="popupId">Đóng</button>
                         </div>
                     </div>
                 </div>
@@ -371,7 +374,7 @@
                         <li>Dịch vụ xác định giá trị tài sản doanh nghiệp phục vụ cho việc chuyển đổi hình thức sở hữu công ty, tham gia thị trường chứng khoán, tham gia góp vốn liên doanh, hợp danh, hợp đồng hợp tác kinh doanh</li>
                         <li>Tư vấn lập, lựa chọn phương án cổ phần hóa, bán, khoán, cho thuê doanh nghiệp</li>
                     </ul>
-                    <button class="btn fw-bold " style="background-color: #3E4595; color: white;" onclick="showTuVanPopup()">
+                    <button class="btn fw-bold " style="background-color: #3E4595; color: white;"  data-popup-show="popupId">
                         NHẬN TƯ VẤN
                         <img src="./asset/img/icon_tick.png" class="icon-tick">
                     </button>
@@ -382,7 +385,7 @@
                             <p>Địa chỉ: Tầng 3, Số 20, Đường số 23, Khu Đô Thị Thành Phố Giao Lưu Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội </p>
                             <p>Điện thoại: 024.6287.2925</p>
                             <p>Email: contact@ssbvietnam.vn</p>
-                            <button class="close-btn" onclick="closeTuVanPopup()">Đóng</button>
+                            <button class="close-btn" data-popup-close="popupId">Đóng</button>
                         </div>
                     </div>
                 </div>
@@ -395,7 +398,7 @@
                         <li>Cung cấp các tài liệu, thông tin bằng văn bản về chính sách cổ phần hóa, chính sách tài chính, chính sách thuế, kế toán có liên quan trực tiếp và chủ yếu tới ngành nghề kinh doanh của doanh nghiệp</li>
                         <li>Cung cấp các thay đổi, sửa đổi và bổ sung Chế độ kế toán Việt Nam, luật thuế tại Việt Nam</li>
                     </ul>
-                    <button class="btn fw-bold " style="background-color: #D3B184; color:#19195E;" onclick="showTuVanPopup()">
+                    <button class="btn fw-bold " style="background-color: #D3B184; color:#19195E;" data-popup-show="popupId">
                         NHẬN TƯ VẤN
                         <img src="./asset/img/arrow_outward22.png">
                     </button>
@@ -406,7 +409,7 @@
                             <p>Địa chỉ: Tầng 3, Số 20, Đường số 23, Khu Đô Thị Thành Phố Giao Lưu Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội </p>
                             <p>Điện thoại: 024.6287.2925</p>
                             <p>Email: contact@ssbvietnam.vn</p>
-                            <button class="close-btn" onclick="closeTuVanPopup()">Đóng</button>
+                            <button class="close-btn" data-popup-close="popupId">Đóng</button>
                         </div>
                     </div>
                 </div>
@@ -651,7 +654,7 @@
                             <div class="col-12 col-md-5 mt-5 p-0 ">
                                 <img src="./asset/img/b6.png" id="img">
                             </div>
-                            <button class="btn" onclick="showTuVanPopup()">
+                            <button class="btn" data-popup-show="popupId">
                                 NHẬN TƯ VẤN MIỄN PHÍ
                                 <img src="./asset/img/icon_tick.png" class="icon-tick">
                             </button>
@@ -662,7 +665,7 @@
                                     <p>Địa chỉ: Tầng 3, Số 20, Đường số 23, Khu Đô Thị Thành Phố Giao Lưu Phường Cổ Nhuế 2, Quận Bắc Từ Liêm, Hà Nội </p>
                                     <p>Điện thoại: 024.6287.2925</p>
                                     <p>Email: contact@ssbvietnam.vn</p>
-                                    <button class="close-btn" onclick="closeTuVanPopup()">Đóng</button>
+                                    <button class="close-btn" data-popup-close="popupId">Đóng</button>
                                 </div>
                             </div>
                         </div>
@@ -723,139 +726,108 @@
              
             </div> -->
             <!-- Phần danh sách testimonials -->
-            <ul class="list-unstyled row mt-4 justify-content-center" style="line-height: 20px;">
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/logo_agribank.jpg); background-size: cover;"></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Agribank</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
+            <div class="container mt-4">
+                <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <ul class="list-unstyled row justify-content-center">
+                                <li class="col-12 col-md-4">
+                                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
+                                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
+                                        <div><img src="./asset/img/Vector 449.png"></div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="rounded-circle" style="width: 80px; height: 80px; background-image: url(./asset/img/logo_agribank.jpg); background-size: cover;"></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold" style="font-family: Crimson Text;">Agribank</div>
+                                                <div style="font-family: Source Sans Pro;">Officer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-12 col-md-4">
+                                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
+                                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
+                                        <div><img src="./asset/img/Vector 449.png"></div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="rounded-circle" style="width: 80px; height: 80px; background-image: url(./asset/img/logo_evnfc.svg); background-size: cover; background-repeat: no-repeat;"></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold" style="font-family: Crimson Text;">EVNFC</div>
+                                                <div style="font-family: Source Sans Pro;">Officer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-12 col-md-4">
+                                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
+                                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
+                                        <div><img src="./asset/img/Vector 449.png"></div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="rounded-circle" style="width: 100px; height: 80px; background-image: url(./asset/img/logo_datc.jpg); background-size: contain;"></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold" style="font-family: Crimson Text;">Công ty TNHH Mua bán nợ Việt Nam (DATC)</div>
+                                                <div style="font-family: Source Sans Pro;">Officer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
-                    </div>
-                </li>
-                <!-- Các phần tử khác -->
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png"></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/logo_evnfc.svg); background-size: cover; background-repeat: no-repeat;"></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">EVNFC</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
+                        <div class="carousel-item">
+                            <ul class="list-unstyled row justify-content-center">
+                                <li class="col-12 col-md-4">
+                                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
+                                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
+                                        <div><img src="./asset/img/Vector 449.png"></div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="rounded-circle" style="width: 80px; height: 80px; background-image: url(./asset/img/logo_fpt1.jpg); background-size: contain;"></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn FPT</div>
+                                                <div style="font-family: Source Sans Pro;">Officer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-12 col-md-4">
+                                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
+                                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
+                                        <div><img src="./asset/img/Vector 449.png"></div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="rounded-circle" style="width: 80px; height: 80px; background-image: url(./asset/img/logo_vingroup.jpg); background-size: contain;"></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn Vingroup</div>
+                                                <div style="font-family: Source Sans Pro;">Officer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                                <li class="col-12 col-md-4">
+                                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
+                                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
+                                        <div><img src="./asset/img/Vector 449.png"></div>
+                                        <div class="d-flex align-items-center mt-4">
+                                            <div class="rounded-circle" style="width: 80px; height: 80px; background-image: url(./asset/img/images.jpg); background-size: cover;"></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn Hoà Phát</div>
+                                                <div style="font-family: Source Sans Pro;">Officer</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
                         </div>
+                        <!-- Thêm các item carousel khác tương tự -->
                     </div>
-                </li>
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/logo_datc.jpg); background-size:cover; "></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Công ty TNHH Mua bán nợ Việt Nam (DATC)</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <!-- <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/logo_fpt1.jpg); background-size:cover; "></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn FPT</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/logo_vingroup.png); background-size:auto;  background-repeat: no-repeat;"></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn Vingroup</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/Resize\ of\ DATC.jpg); background-size:cover; "></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn Hoà Phát</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/Resize\ of\ DATC.jpg); background-size:cover; "></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Ngân hàng TMCP Đầu tư và Phát triển Việt Nam – BIDV</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/Resize\ of\ DATC.jpg); background-size:cover; "></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn Công nghiệp Viễn thông Quân đội – Viettel</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/Resize\ of\ DATC.jpg); background-size:cover; "></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn Xăng dầu Việt Nam – Petrolimex</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
-                        </div>
-                    </div>
-                </li>
-                <li class="col-12 col-md-4">
-                    <div class="testimonial-item rounded-3 p-4" style="background-color: #F5F4F0;">
-                        <p class="mt-3" style="font-family: Source Sans Pro;"></p>
-                        <div><img src="./asset/img/Vector 449.png" ></div>
-                        <div class="d-flex align-items-center mt-4">
-                            <div class="rounded-circle " style="width: 70px; height: 70px; background-image: url(./asset/img/Resize\ of\ DATC.jpg); background-size:cover; "></div>
-                            <div class="ms-3">
-                                <div class="fw-bold" style="font-family: Crimson Text;">Tập đoàn Bưu chính Viễn thông Việt Nam (VNPT)</div>
-                                <div style="font-family: Source Sans Pro;">Officer</div>
-                            </div>
-                        </div>
-                    </div>
-                </li> -->
-            </ul>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Previous</span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="visually-hidden">Next</span>
+                    </button>
+                </div>
+            </div>
+            
 
             <!-- <div class="d-flex justify-content-between">
                 <div>
