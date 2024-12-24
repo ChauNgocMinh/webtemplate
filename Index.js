@@ -1,51 +1,119 @@
-document.addEventListener('DOMContentLoaded', function() {
+// Hàm hiển thị popup "NHẬN TƯ VẤN MIỄN PHÍ"
+function showTuVanPopup() {
+    const popup = document.getElementById('nhantuvan-popup');
+    if (popup) {
+        popup.style.display = 'flex';
+    }
+}
+
+// Hàm đóng popup "NHẬN TƯ VẤN MIỄN PHÍ"
+function closeTuVanPopup() {
+    const popup = document.getElementById('nhantuvan-popup');
+    if (popup) {
+        popup.style.display = 'none';
+    }
+}
+
+// Hàm hiển thị popup "TÌM HIỂU THÊM"
+function showPopup() {
+    const popup = document.getElementById('timhieuthem-popup');
+    if (popup) {
+        popup.style.display = 'flex';
+    }
+}
+
+// Hàm đóng popup "TÌM HIỂU THÊM"
+function closePopup() {
+    const popup = document.getElementById('timhieuthem-popup');
+    if (popup) {
+        popup.style.display = 'none';
+    }
+}
+
+// Hàm cập nhật nội dung khi thay đổi kích thước cửa sổ
+const updateContentBasedOnWidth = () => {
+    const changeElement = document.querySelector('.change');
+    if (!changeElement) return;
+    if (window.innerWidth < 740) {
+        changeElement.innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
+    } else if (window.innerWidth <= 1023) {
+        changeElement.innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
+    } else {
+        changeElement.innerHTML = 'Giải pháp định giá toàn diện cho doanh nghiệp của bạn';
+    }
+};
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Lấy các phần tử HTML cần sử dụng
+    const changeElement = document.querySelector('.change');
     const showSurveyButton = document.getElementById('showSurvey');
     const surveyBox = document.getElementById('boxStep3');
     const closeSurveyButton = document.getElementById('closeSurvey');
+    const btnFindOutMore = document.querySelector('.btn');
+    const recruitmentLink = document.getElementById('popup-tuyendung');
+    const maintenancePopup = document.getElementById('timhieuthem-popup');
+    const recruitmentPopup = document.getElementById('tuyendung-popup');
+    const closePopupButtons = document.querySelectorAll('.popup-content .close-btn');
+    const tuVanButton = document.querySelector('.btn.px-4.py-3.fw-bold');
+    const tuVanCloseButton = document.querySelector('#nhantuvan-popup .close-btn');
+    
+    // Cập nhật nội dung khi tải trang và khi thay đổi kích thước cửa sổ
+    window.addEventListener('resize', updateContentBasedOnWidth);
+    updateContentBasedOnWidth();
 
-    // Kiểm tra nếu các phần tử tồn tại trước khi gán sự kiện
-    if (showSurveyButton && surveyBox && closeSurveyButton) {
-        // Thêm sự kiện click cho nút "showSurvey"
-        showSurveyButton.addEventListener('click', function() {
-            const currentDisplay = window.getComputedStyle(surveyBox).display;
-            if (currentDisplay === 'none') {
-                surveyBox.style.display = 'block';  // Hiển thị
-            } else {
-                surveyBox.style.display = 'none';  // Ẩn
-            }
-        });
+    // Hiển thị hoặc ẩn các popup
+    const togglePopupVisibility = (popup, show) => {
+        if (popup) {
+            popup.style.display = show ? 'flex' : 'none';
+        }
+    };
 
-        // Thêm sự kiện click cho nút tắt "closeSurvey"
-        closeSurveyButton.addEventListener('click', function() {
-            surveyBox.style.display = 'none';  // Ẩn surveyBox khi nhấn nút tắt
+    // Hiển thị popup bảo trì khi nhấn vào nút "TÌM HIỂU THÊM"
+    if (btnFindOutMore) {
+        btnFindOutMore.addEventListener('click', () => togglePopupVisibility(maintenancePopup, true));
+    }
+
+    // Hiển thị popup tuyển dụng khi nhấn vào mục "TUYỂN DỤNG"
+    if (recruitmentLink) {
+        recruitmentLink.addEventListener('click', (event) => {
+            event.preventDefault(); // Ngăn không chuyển trang
+            togglePopupVisibility(recruitmentPopup, true);
         });
     }
 
-    // Thêm sự kiện click cho các nút có class '.btn'
-    const btnElements = document.querySelectorAll('.btn');
-    btnElements.forEach(function(btn) {
-        btn.addEventListener('click', function() {
-            // Hiển thị thông báo "Đang chờ cập nhật"
-            alert("Đang chờ cập nhật");
+    // Đóng popup khi nhấn vào bất kỳ nút "Đóng"
+    closePopupButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            togglePopupVisibility(maintenancePopup, false);
+            togglePopupVisibility(recruitmentPopup, false);
         });
     });
 
-    // Lắng nghe sự kiện thay đổi kích thước cửa sổ (resize)
-    window.addEventListener('resize', function() {
-        // Kiểm tra nếu kích thước cửa sổ nhỏ hơn 740px (màn hình di động)
-        if (window.innerWidth < 740) {
-            document.querySelector('.change').innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
-        } 
-        // Kiểm tra nếu kích thước cửa sổ từ 740px đến 1023px (màn hình tablet)
-        else if (window.innerWidth >= 740 && window.innerWidth <= 1023) {
-            document.querySelector('.change').innerHTML = 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH';
-        } 
-        else {
-            // Nếu kích thước cửa sổ lớn hơn 1023px, giữ nguyên nội dung ban đầu
-            document.querySelector('.change').innerHTML = 'Giải pháp định giá toàn diện cho doanh nghiệp của bạn';
-        }
-    });
+    // Sự kiện hiển thị hoặc ẩn hộp khảo sát
+    if (showSurveyButton && surveyBox && closeSurveyButton) {
+        showSurveyButton.addEventListener('click', () => surveyBox.style.display = 'block');
+        closeSurveyButton.addEventListener('click', () => surveyBox.style.display = 'none');
+    }
 
-    // Chạy lại sự kiện resize để cập nhật khi tải trang
-    window.dispatchEvent(new Event('resize'));
+    // Hiển thị popup "NHẬN TƯ VẤN MIỄN PHÍ"
+    if (tuVanButton) {
+        tuVanButton.addEventListener('click', showTuVanPopup);
+    }
+
+    // Đóng popup "NHẬN TƯ VẤN MIỄN PHÍ"
+    if (tuVanCloseButton) {
+        tuVanCloseButton.addEventListener('click', closeTuVanPopup);
+    }
+    
+    // Thêm sự kiện cho nút "TÌM HIỂU THÊM"
+    const btnFindOutMorePopup = document.querySelector('.btn-findout-more');
+    if (btnFindOutMorePopup) {
+        btnFindOutMorePopup.addEventListener('click', showPopup);
+    }
+
+    // Thêm sự kiện cho nút "Đóng" của popup "TÌM HIỂU THÊM"
+    const closeFindOutMorePopup = document.querySelector('#timhieuthem-popup .close-btn');
+    if (closeFindOutMorePopup) {
+        closeFindOutMorePopup.addEventListener('click', closePopup);
+    }
 });

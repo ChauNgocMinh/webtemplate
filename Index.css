@@ -51,3 +51,56 @@ a{
 .icon-tick{
   
 }
+.popup-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Làm tối background một chút */
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Đảm bảo popup nằm trên mọi thành phần khác */
+    overflow: hidden; /* Đảm bảo popup không tràn khỏi viewport */
+}
+
+.popup-content {
+    position: relative;
+    background: #ffffff; /* Nền trắng cho popup */
+    border-radius: 10px; /* Góc bo tròn mượt hơn */
+    padding: 20px;
+    max-width: 600px; /* Chiều rộng tối đa cụ thể */
+    max-height: 80%; /* Giới hạn chiều cao tối đa */
+    overflow-y: auto; /* Thêm thanh cuộn dọc nếu nội dung quá dài */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Đổ bóng đẹp hơn */
+    text-align: center; /* Căn giữa nội dung */
+    animation: popup-appear 0.3s ease-in-out; /* Hiệu ứng mở popup */
+}
+
+.close-btn {
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #f44336; /* Màu đỏ nổi bật */
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Hiệu ứng khi hover */
+    align-self: center;
+}
+
+.close-btn:hover {
+    background-color: #d32f2f; /* Màu tối hơn khi hover */
+}
+
+@keyframes popup-appear {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
