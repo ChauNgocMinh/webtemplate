@@ -48,9 +48,7 @@ a{
     border: none;
     border-radius: 0px;
 }
-.icon-tick{
-  
-}
+
 .overlay-popup {
     position: fixed;
     top: 0;
@@ -198,25 +196,5 @@ a{
     transform: scale(1.05); /* Phóng to nhẹ khi hover */
 }
 
-@keyframes popup-appear {
-    from {
-        transform: scale(0.8);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}
 
 
-@keyframes popup-appear {
-    from {
-        transform: scale(0.9);
-        opacity: 0;
-    }
-    to {
-        transform: scale(1);
-        opacity: 1;
-    }
-}

@@ -529,9 +529,16 @@
     }
 
     /*************************************** Line 4 ***************************************/
+    
     .container1 .line-4 {
         color: #19195E;
         margin-top: 35%;
+    }
+    .container1 .line-4 > .row .left ul{
+        position: sticky;
+        top: 0; /* Dính vào đầu màn hình khi cuộn */
+        background-color: red; /* Thêm màu nền để dễ nhìn */
+        z-index: 1; /* Đảm bảo phần tử không bị che khuất */
     }
     .container1 .line-4 > .row .left ul{
         padding: 15px 10px;  
@@ -539,11 +546,7 @@
     .container1 .line-4 > .row .left ul li{
         padding: 10px;  
     }
-           
-    /* .container1 .line-4 .row > div:last-child {
-        margin-top: 8%;
-    } */
- 
+
  
     .container1 .line-4 > .row > div:first-child ul li:first-child {
         background-color: #3E4595;
@@ -551,21 +554,9 @@
     .container1 .line-4 > .row div:first-child ul li:first-child a {
         color: #fff !important;
     }
-    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul {
-        margin-top: 25%;
-    }
-    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul li {
-        padding: 5px;
-    }
     .container1 .line-4 .row > div:first-child > ul li:hover a {
         color: black;
         transition: ease 0.3s;
-    }
-    .container1 .line-4 > .row .left ul{
-        padding: 15px 10px;
-    }
-    .container1 .line-4 > .row .left ul li{
-        padding: 10px;
     }
 
     .container1 .line-4 #img {
@@ -573,16 +564,19 @@
         height: auto;
         padding: 0;
     }
+    
     .container1 .line-4 .step {
         position: relative;
         display: flex;
         align-items: center;
         padding: 0;
     }
-    /* .container1 .line-4 .row .step:nth-child(6) div:first-child > ul li {
-        padding:15px ;
-    } */
-    
+    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul {
+        margin-top: 25%;
+    }
+    .container1 .line-4 > .row .step:nth-child(3) .row div:last-child ul li {
+        padding: 5px;
+    }
     .container1 .line-4 .row .step:nth-child(7) div {
         flex-direction: row;
     }
@@ -616,14 +610,7 @@
         cursor: pointer;
     }
     /*************************************** Line 6 ***************************************/
-    /* .container1 .line-6 {
-        margin-top: 5%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
-        text-align: center;
-    } */
+
 
     /*************************************** Line Footer ***************************************/
     .footer {
