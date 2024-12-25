@@ -48,6 +48,16 @@ a{
     border: none;
     border-radius: 0px;
 }
+.rectangle {
+    position: absolute;
+    background-color: #D3B184;
+    top: -10%;
+    left: 25%;
+    width: 45%;
+    height: 120%;
+    z-index: -1;
+}
+
 
 .overlay-popup {
     position: fixed;
@@ -196,5 +206,25 @@ a{
     transform: scale(1.05); /* Phóng to nhẹ khi hover */
 }
 
+/* Thay đổi màu sắc cho các nút */
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    background-color: red; /* Màu của mũi tên */
+}
+
+/* Thêm khoảng cách cho các nút điều khiển */
+.carousel-control-prev, .carousel-control-next {
+    width: 50px; /* Kích thước của nút */
+    height: 50px; /* Kích thước của nút */
+    top: 50%; /* Đặt nút ở giữa carousel */
+    transform: translateY(-50%); /* Cân chỉnh nút chính giữa */
+}
+
+.carousel-control-prev {
+    margin-left: 10px; /* Khoảng cách từ cạnh trái */
+}
+
+.carousel-control-next {
+    margin-right: 10px; /* Khoảng cách từ cạnh phải */
+}
 
 

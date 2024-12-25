@@ -19,6 +19,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Quản lý carousel testimonials
     const manageCarouselTestimonials = () => {
+        const slideTransitionDuration = 1000; // Đặt thời gian chuyển là 1 giây (1000ms)
+
         const carouselElement = document.querySelector('#testimonialCarousel');
         if (!carouselElement) return;
 
@@ -33,16 +35,24 @@ document.addEventListener('DOMContentLoaded', () => {
         // Gán sự kiện khi nhấn nút chuyển slide
         prevButton?.addEventListener('click', () => {
             console.log('Chuyển về slide trước');
+            setTimeout(() => {
+                carousel.cycle(); // Tiếp tục tự động chạy carousel nếu cần
+            }, slideTransitionDuration); // Sau khi hoàn thành chuyển slide
         });
 
         nextButton?.addEventListener('click', () => {
             console.log('Chuyển tới slide tiếp theo');
+            setTimeout(() => {
+                carousel.cycle(); // Tiếp tục tự động chạy carousel nếu cần
+            }, slideTransitionDuration); // Sau khi hoàn thành chuyển slide
         });
 
         // Cập nhật nội dung slide khi có sự kiện chuyển slide
         carouselElement.addEventListener('slid.bs.carousel', (e) => {
             console.log('Slide hiện tại:', e.relatedTarget);
         });
+
+      
     };
 
     // Hàm gán sự kiện cho các phần tử

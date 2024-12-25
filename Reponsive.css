@@ -1,6 +1,4 @@
-.container1 .line-4{
-    margin-top: 10%;
-}
+
 @media (min-width:1920px) {
 
     /* Navbar */
@@ -95,13 +93,11 @@
         position: relative;
     }
     .container1 .line-1 .banner-11 {
-        position: absolute;
+    
         display: block;
         background-color: #3E4595;
         color: #fff;
         width: 25%;
-        bottom: -10%;
-        left: 40%;
         padding: 20px 0;
     }
 
@@ -122,15 +118,7 @@
         align-content: center;
         margin: 12% 0;
     }
-    .rectangle {
-        position: absolute;
-        background-color: #D3B184;
-        top: -10%;
-        left: 25%;
-        width: 45%;
-        height: 120%;
-        z-index: -1;
-    }
+  
 
     /*************************************** Line 3 ***************************************/
     .container1 .line-3 {
@@ -465,15 +453,7 @@
         align-content: center;
         margin: 12% 0;
     }
-    .rectangle {
-        position: absolute;
-        background-color: #D3B184;
-        top: -10%;
-        left: 25%;
-        width: 45%;
-        height: 120%;
-        z-index: -1;
-    }
+   
 
     /*************************************** Line 3 ***************************************/
     .container1 .line-3 {
@@ -535,7 +515,7 @@
 
     }
     .container1 .line-4 > .row .left ul{
-        padding: 15px 10px;  
+        padding: 20px 10px;  
     }
     .container1 .line-4 > .row .left ul li{
         padding: 10px;  
@@ -792,15 +772,7 @@
         align-content: center;
         margin: 12% 0px;
     }
-    .rectangle{
-        position: absolute;
-        background-color: #D3B184;
-        top: -10%;
-        left: 25%;
-        width: 45%;
-        height: 120%;
-        z-index: -1;
-    }
+  
     
     /*************************************** Line 3 ***************************************/
     .container1 .line-3 {
@@ -1158,15 +1130,7 @@
         align-content: center;
         margin: 12% 0px;
     }
-    .rectangle{
-        position: absolute;
-        background-color: #D3B184;
-        top: -10%;
-        left: 25%;
-        width: 45%;
-        height: 120%;
-        z-index: -1;
-    }
+ 
     
     /*************************************** Line 3 ***************************************/
     .container1 .line-3 {
@@ -1547,15 +1511,7 @@
         align-content: center;
         margin: 12% 0px;
     }
-    .rectangle{
-        position: absolute;
-        background-color: #D3B184;
-        top: -10%;
-        left: 25%;
-        width: 45%;
-        height: 120%;
-        z-index: -1;
-    }
+   
     /*************************************** Line 3 ***************************************/
     
 
@@ -1741,7 +1697,15 @@
         padding: 0;
         margin: 0;
     }
-    
+    .footer .footer-2 li:nth-child(3) {
+        order: 1;
+    }
+    .footer .footer-2 li:nth-child(2) {
+        order: 2;
+    }
+    .footer .footer-2 li:nth-child(1) {
+        order: 3;
+    }
     .footer .footer-2 li > p:first-child {
         font-size: 20px;
         font-weight: bold;
@@ -1929,15 +1893,7 @@
         align-content: center;
         margin: 12% 0px;
     }
-    .rectangle{
-        position: absolute;
-        background-color: #D3B184;
-        top: -10%;
-        left: 25%;
-        width: 45%;
-        height: 120%;
-        z-index: -1;
-    }
+  
     /*************************************** Line 3 ***************************************/
     
 
@@ -2124,7 +2080,15 @@
         padding: 0;
         margin: 0;
     }
-    
+    .footer .footer-2 li:nth-child(3) {
+        order: 1;
+    }
+    .footer .footer-2 li:nth-child(2) {
+        order: 2;
+    }
+    .footer .footer-2 li:nth-child(1) {
+        order: 3;
+    }
     .footer .footer-2 li > p:first-child {
         font-size: 20px;
         font-weight: bold;
@@ -2312,15 +2276,7 @@
         align-content: center;
         margin: 12% 0px;
     }
-    .rectangle{
-        position: absolute;
-        background-color: #D3B184;
-        top: -10%;
-        left: 25%;
-        width: 45%;
-        height: 120%;
-        z-index: -1;
-    }
+  
     /*************************************** Line 3 ***************************************/
     
 
@@ -2509,7 +2465,15 @@
         padding: 0;
         margin: 0;
     }
-    
+    .footer .footer-2 li:nth-child(3) {
+        order: 1;
+    }
+    .footer .footer-2 li:nth-child(2) {
+        order: 2;
+    }
+    .footer .footer-2 li:nth-child(1) {
+        order: 3;
+    }
     .footer .footer-2 li > p:first-child {
         font-size: 20px;
         font-weight: bold;
@@ -2696,15 +2660,6 @@
         position: relative;
         align-content: center;
         margin: 12% 0px;
-    }
-    .rectangle{
-        position: absolute;
-        background-color: #D3B184;
-        top: -10%;
-        left: 25%;
-        width: 45%;
-        height: 120%;
-        z-index: -1;
     }
     /*************************************** Line 3 ***************************************/
     
@@ -2894,7 +2849,15 @@
         padding: 0;
         margin: 0;
     }
-    
+    .footer .footer-2 li:nth-child(3) {
+        order: 1;
+    }
+    .footer .footer-2 li:nth-child(2) {
+        order: 2;
+    }
+    .footer .footer-2 li:nth-child(1) {
+        order: 3;
+    }
     .footer .footer-2 li > p:first-child {
         font-size: 20px;
         font-weight: bold;
