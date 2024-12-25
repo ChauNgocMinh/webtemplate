@@ -68,6 +68,22 @@ document.addEventListener('DOMContentLoaded', () => {
         togglePopupVisibility('tuyendung-popup', false);
     });
 
+    function openPopup() {
+        document.getElementById('tuyendung-popup').style.display = 'flex';
+    }
+
+    // Hàm để đóng popup
+    function closePopup() {
+        document.getElementById('tuyendung-popup').style.display = 'none';
+    }
+
+    // Tùy chọn: Đóng popup khi nhấn ra ngoài overlay
+    document.getElementById('tuyendung-popup').addEventListener('click', function (event) {
+        if (event.target === this) {
+            closePopup();
+        }
+    });
+    
     // Hộp khảo sát
     assignEvent('#showSurvey', 'click', () => togglePopupVisibility('boxStep3', true));
     assignEvent('#closeSurvey', 'click', () => togglePopupVisibility('boxStep3', false));
