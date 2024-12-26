@@ -34,6 +34,8 @@
         height: 93px;
         align-items: center;
         gap: 15px;
+        background-color: #3E4595;
+        color: #ffff;
     }
     .header .nav-menu .item-call p {
         color: #fff;
@@ -368,6 +370,8 @@
         height: 93px;
         align-items: center;
         gap: 15px;
+        background-color: #3E4595;
+        color: #ffff;
     }
     .header .nav-menu .item-call p {
         color: #fff;
@@ -679,9 +683,11 @@
         height: 93px;
         align-items: center;
         gap: 15px;
+        background-color: #3E4595;
+        color: #ffff;
     }
     .header .nav-menu .item-call p {
-        color: #141B34;
+        color: #fff;
         font-size: 24px;
     }
     .nav-menu .item:last-child {
@@ -1037,9 +1043,11 @@
         height: 93px;
         align-items: center;
         gap: 15px;
+        background-color: #3E4595;
+        color: #ffff;
     }
     .header .nav-menu .item-call p {
-        color: #141B34;
+        color: #fff;
         font-size: 24px;
     }
     .nav-menu .item:last-child {
@@ -1392,21 +1400,8 @@
         line-height: normal;
         letter-spacing: 1px;
     }
-    .header .nav-menu .item-call {
-        display: flex;
-        height: 93px;
-        align-items: center;
-        gap: 15px;
-    }
-    .header .nav-menu .item-call p {
-        color: #141B34;
-        font-size: 24px;
-    }
-    .nav-menu .item:last-child {
-        background-color: #3E4595;
-        padding: 0 30px;
-    }
-    
+  
+ 
 
     /*************************************** Line chung ***************************************/
 

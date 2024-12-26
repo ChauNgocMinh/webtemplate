@@ -105,3 +105,12 @@ document.addEventListener('DOMContentLoaded', () => {
     // Kích hoạt chức năng quản lý carousel
     manageCarouselTestimonials();
 });
+// Hiển thị popup khi nhấn vào mục "popup-call"
+document.getElementById("popup-call").addEventListener("click", function () {
+    document.getElementById("popup-call-overlay").style.display = "flex";
+});
+
+// Đóng popup khi nhấn vào nút "Đóng"
+document.querySelector("[data-popup-close='popup-call-overlay']").addEventListener("click", function () {
+    document.getElementById("popup-call-overlay").style.display = "none";
+});
