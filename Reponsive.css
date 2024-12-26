@@ -246,7 +246,7 @@
     .container1 .line-5 img {
         max-width: 100%;
         height: auto;
-        border-radius: 0PX; /* Làm mềm các góc ảnh nếu cần */
+        border-radius: 0px; /* Làm mềm các góc ảnh nếu cần */
         transition: transform 0.3s ease-in-out; /* Hiệu ứng khi hover */
     }
 
