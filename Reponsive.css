@@ -1,6 +1,3 @@
-
-@media (min-width:1920px) {
-
     /* Navbar */
     .navbar-toggler {
         border: none;
@@ -14,7 +11,7 @@
         padding: 10px;
     }
     .header .nav-menu .nav-item {
-        color: var(--12251-f, #141B34);
+        color:#3E4595;
         font-size: 20px;
         font-weight: 400;
         line-height: normal;
@@ -24,10 +21,6 @@
     .header .nav-menu ul .item ul li a:hover {
         color:brown;
         transition: ease 0.3s;
-    }
-    .header  .nav-menu ul .item .popup-overlay .popup-content ul li > p{
-        font-weight: bold;
-        font-size: 25px;
     }
     .header .nav-menu .item-call {
         display: flex;
@@ -55,7 +48,15 @@
         height: auto;
         padding: 0;
     }
+    .container1 .line-2 .row .btn,
+    .container1 .line-3 .row .btn,
+    .container1 .line-4 .row .step:last-child div > div:first-child > .btn {
+        width: 100%;
+        margin: 10px 0;
+    }
+@media (min-width:1920px) {
 
+ 
     /*************************************** Line 1 ***************************************/
     .container1 {
         font-size: 16px;
@@ -125,11 +126,11 @@
     /*************************************** Line 3 ***************************************/
     .container1 .line-3 {
         color: white;
+        background-image: url('./asset/img/Img2.png');
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        padding: 5% 0;
-        height: 80vh;
+        height: auto;
         width: 100%;
     }
     .container1 .line-3 .btn {
@@ -146,13 +147,7 @@
     .container1 .line-3 .btn:hover {
         transform: scale(1.05);
     }
-    .container1 .line-3 .list-service {
-        margin-top: 5%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+ 
     .container1 .line-3 .list-service .service-card {
         width: 32%;
         padding: 25px;
@@ -340,56 +335,7 @@
 /* ****************************** PC, LAPTOP ****************************** */
 @media  (min-width: 1366px) and (max-width:1920px) {
 
-    /* Navbar */
-    .navbar-toggler {
-        border: none;
-    }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    .navbar-nav .nav-link {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 10px;
-    }
-    .header .nav-menu .nav-item {
-        color: var(--12251-f, #141B34);
-        font-size: 20px;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 1px;
-    }
-    
-    .header .nav-menu ul .item ul li a:hover {
-        color:brown;
-        transition: ease 0.3s;
-    }
-    .header .nav-menu .item-call {
-        display: flex;
-        height: 93px;
-        align-items: center;
-        gap: 15px;
-        background-color: #3E4595;
-        color: #ffff;
-    }
-    .header .nav-menu .item-call p {
-        color: #fff;
-        font-size: 24px;
-    }
-    .nav-menu .item:last-child {
-        background-color: #3E4595;
-        padding: 0 30px;
-    }
 
-    /* Images */
-    .container1 .line-1 #img,
-    .container1 .line-2 #img,
-    .container1 .line-3 #img,
-    .container1 .line-6 #img {
-        width: 100%;
-        height: auto;
-        padding: 0;
-    }
 
     /*************************************** Line 1 ***************************************/
     .container1 {
@@ -465,8 +411,7 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        padding: 5% 0;
-        height: 80vh;
+        height: auto;
         width: 100%;
     }
     .container1 .line-3 .btn {
@@ -483,13 +428,7 @@
     .container1 .line-3 .btn:hover {
         transform: scale(1.05);
     }
-    .container1 .line-3 .list-service {
-        margin-top: 5%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+
     .container1 .line-3 .list-service .service-card {
         width: 32%;
         padding: 25px;
@@ -514,7 +453,6 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 35% ;
 
     }
     .container1 .line-4 > .row .left ul{
@@ -658,53 +596,7 @@
 /******************************* TABLET ********************************/
 @media (min-width: 1024px) and (max-width: 1366px){
     
-    .navbar-toggler {
-        border: none;
-    }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    .navbar-nav .nav-link {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 10px;
-    }
-    /* Cấu hình mặc định */
-    .header .nav-menu .nav-item {
-        color: var(--12251-f, #141B34);
-        font-size: 20px;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 1px;
-    }
-    .header .nav-menu .item-call {
-        display: flex;
-        height: 93px;
-        align-items: center;
-        gap: 15px;
-        background-color: #3E4595;
-        color: #ffff;
-    }
-    .header .nav-menu .item-call p {
-        color: #fff;
-        font-size: 24px;
-    }
-    .nav-menu .item:last-child {
-        background-color: #3E4595;
-        padding: 0 30px;
-    }
     
-    
-    .container1 .line-1 #img,
-    .container1 .line-2 #img,
-    .container1 .line-3 #img,
-    .container1 .line-6 #img{
-        width: 100%;
-        height: auto;
-        padding: 0px;
-    }
-    
-
     
     /*************************************** Line 1 ***************************************/
     .container1 {
@@ -786,8 +678,6 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        padding: 5% 0px;
-        height: 80vh;
         width: 100%;
     }
     
@@ -807,20 +697,14 @@
         transform: scale(1.05);
     }
     
-    .container1 .line-3 .list-service {
-        position: relative;
-        margin-top: 5%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+  
     
     .container1 .line-3 .list-service .service-card {
         width: 100%;
         padding: 25px;
         box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
         transition: all 0.3s ease;
+        justify-items: center;
     }
     
     
@@ -842,7 +726,6 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 15% !important;
     }
 
     .container1 .line-4 > .row .left ul{
@@ -1018,52 +901,7 @@
 /******************************* TABLET ********************************/
 @media (min-width: 768px) and (max-width: 1024px){
     
-    .navbar-toggler {
-        border: none;
-    }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    .navbar-nav .nav-link {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 10px;
-    }
-    /* Cấu hình mặc định */
-    .header .nav-menu .nav-item {
-        color: var(--12251-f, #141B34);
-        font-size: 20px;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 1px;
-    }
-    .header .nav-menu .item-call {
-        display: flex;
-        height: 93px;
-        align-items: center;
-        gap: 15px;
-        background-color: #3E4595;
-        color: #ffff;
-    }
-    .header .nav-menu .item-call p {
-        color: #fff;
-        font-size: 24px;
-    }
-    .nav-menu .item:last-child {
-        background-color: #3E4595;
-        padding: 0 30px;
-    }
-    
-    
-    .container1 .line-1 #img,
-    .container1 .line-2 #img,
-    .container1 .line-3 #img,
-    .container1 .line-6 #img{
-        width: 100%;
-        height: auto;
-        padding: 0px;
-    }
-    
+ 
 
     
     /*************************************** Line 1 ***************************************/
@@ -1144,10 +982,8 @@
         color: white;
         background-image: url('./asset/img/Img2.png');
         background-size: cover;
-        background-repeat: no-repeat;
         background-position: center;
-        padding: 5% 0px;
-        height: 80vh;
+        background-repeat: no-repeat;
         width: 100%;
     }
     
@@ -1167,14 +1003,7 @@
         transform: scale(1.05);
     }
     
-    .container1 .line-3 .list-service {
-        position: relative;
-        margin-top: 5%;
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 20px;
-    }
+   
     
     .container1 .line-3 .list-service .service-card {
         width: 100%;
@@ -1202,7 +1031,6 @@
     /*************************************** Line 4 ***************************************/
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 75% ;
     }
 
     .container1 .line-4 > .row .left ul{
@@ -1379,38 +1207,9 @@
 
 /******************************* MOBILE ********************************/
 @media (min-width: 430px) and (max-width: 768px) {
-   
-    .navbar-toggler {
-        border: none;
-    }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    .navbar-nav .nav-link {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 10px;
-    }
-    /* Cấu hình mặc định */
-    .header .nav-menu .nav-item {
-        color: var(--12251-f, #141B34);
-        font-size: 20px;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 1px;
-    }
-  
+
  
 
-    /*************************************** Line chung ***************************************/
-
-
-    .container1 .line-2 .row .btn,
-    .container1 .line-3 .row .btn,
-    .container1 .line-4 .row .step:last-child div > div:first-child > .btn {
-        width: 100%;
-        margin: 10px 0;
-    }
 
 
 
@@ -1513,21 +1312,15 @@
         color: white;
         background-image: url('./asset/img/Img2.png');
         background-size: cover;
-        background-repeat: no-repeat;
         background-position: center;
-        padding: 10% 0px;
-        height: 80vh;
+        background-repeat: no-repeat;
         width: 100%;
     }
    
     .container1 .line-3  div:nth-child(2) h3{
         width: 100% !important;
     }
-    .container1 .line-3 .list-service {
-        display: flex;
-        flex-direction: column; /* Chuyển các card thành cột dọc */
-        gap: 50px; /* Tạo khoảng cách giữa các card */
-    }
+   
 
     .container1 .line-3 .list-service .service-card {
         background-color: #3E4595;
@@ -1569,7 +1362,6 @@
 
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 230%;
     }
     
     .container1 .line-4 > .row .left ul{
@@ -1594,6 +1386,10 @@
 
     .container1 .line-4 .row .step:nth-child(3) .row div:last-child {
         order: 1;
+    }
+    .container1 .line-4 .row .step:nth-child(3) .row div:last-child {
+        width: 520px;
+        height: auto;
     }
 
     .container1 .line-4 .row .step:nth-child(6) .row div:first-child {
@@ -1748,51 +1544,7 @@
     }    
 }
 @media (min-width: 414px) and (max-width: 430px) {
-    .navbar-toggler {
-        border: none;
-    }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    .navbar-nav .nav-link {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 10px;
-    }
-    /* Cấu hình mặc định */
-    .header .nav-menu .nav-item {
-        color: var(--12251-f, #141B34);
-        font-size: 20px;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 1px;
-    }
-    .header .nav-menu .item-call {
-        display: flex;
-        height: 93px;
-        align-items: center;
-        gap: 15px;
-    }
-    .header .nav-menu .item-call p {
-        color: #141B34;
-        font-size: 24px;
-    }
-    .nav-menu .item:last-child {
-        background-color: #3E4595;
-        padding: 0 30px;
-    }
-    
-
-    /*************************************** Line chung ***************************************/
-
-
-    .container1 .line-2 .row .btn,
-    .container1 .line-3 .row .btn,
-    .container1 .line-4 .row .step:last-child div > div:first-child > .btn {
-        width: 100%;
-        margin: 10px 0;
-    }
-
+  
 
 
     /*************************************** Line 1 ***************************************/
@@ -1895,22 +1647,15 @@
         color: white;
         background-image: url('./asset/img/Img2.png');
         background-size: cover;
-        background-repeat: no-repeat;
         background-position: center;
-        padding: 10% 0px;
-        height: 80vh;
+        background-repeat: no-repeat;
         width: 100%;
     }
    
     .container1 .line-3  div:nth-child(2) h3{
         width: 100% !important;
     }
-    .container1 .line-3 .list-service {
-        display: flex;
-        flex-direction: column; /* Chuyển các card thành cột dọc */
-        gap: 50px; /* Tạo khoảng cách giữa các card */
-    }
-
+ 
     .container1 .line-3 .list-service .service-card {
         background-color: #3E4595;
         width: 100% !important;
@@ -1951,7 +1696,6 @@
 
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 250% ;
     }
     
     
@@ -2131,50 +1875,6 @@
     }    
 }
 @media (min-width: 390px) and (max-width: 414px) {
-    .navbar-toggler {
-        border: none;
-    }
-    .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%280, 0, 0, 0.5%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
-    }
-    .navbar-nav .nav-link {
-        font-size: 16px;
-        font-weight: 500;
-        padding: 10px;
-    }
-    /* Cấu hình mặc định */
-    .header .nav-menu .nav-item {
-        color: var(--12251-f, #141B34);
-        font-size: 20px;
-        font-weight: 400;
-        line-height: normal;
-        letter-spacing: 1px;
-    }
-    .header .nav-menu .item-call {
-        display: flex;
-        height: 93px;
-        align-items: center;
-        gap: 15px;
-    }
-    .header .nav-menu .item-call p {
-        color: #141B34;
-        font-size: 24px;
-    }
-    .nav-menu .item:last-child {
-        background-color: #3E4595;
-        padding: 0 30px;
-    }
-    
-
-    /*************************************** Line chung ***************************************/
-
-
-    .container1 .line-2 .row .btn,
-    .container1 .line-3 .row .btn,
-    .container1 .line-4 .row .step:last-child div > div:first-child > .btn {
-        width: 100%;
-        margin: 10px 0;
-    }
 
 
 
@@ -2278,20 +1978,13 @@
         color: white;
         background-image: url('./asset/img/Img2.png');
         background-size: cover;
-        background-repeat: no-repeat;
         background-position: center;
-        padding: 10% 0px;
-        height: 80vh;
+        background-repeat: no-repeat;
         width: 100%;
     }
    
     .container1 .line-3  div:nth-child(2) h3{
         width: 100% !important;
-    }
-    .container1 .line-3 .list-service {
-        display: flex;
-        flex-direction: column; /* Chuyển các card thành cột dọc */
-        gap: 50px; /* Tạo khoảng cách giữa các card */
     }
 
     .container1 .line-3 .list-service .service-card {
@@ -2334,7 +2027,6 @@
 
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 270% ;
     }
     
     
@@ -2554,12 +2246,7 @@
     /*************************************** Line chung ***************************************/
 
 
-    .container1 .line-2 .row .btn,
-    .container1 .line-3 .row .btn,
-    .container1 .line-4 .row .step:last-child div > div:first-child > .btn {
-        width: 100%;
-        margin: 10px 0;
-    }
+ 
 
 
 
@@ -2664,19 +2351,14 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        padding: 10% 0px;
-        height: 80vh;
+
         width: 100%;
     }
    
     .container1 .line-3  div:nth-child(2) h3{
         width: 100% !important;
     }
-    .container1 .line-3 .list-service {
-        display: flex;
-        flex-direction: column; /* Chuyển các card thành cột dọc */
-        gap: 50px; /* Tạo khoảng cách giữa các card */
-    }
+  
 
     .container1 .line-3 .list-service .service-card {
         background-color: #3E4595;
@@ -2703,11 +2385,7 @@
     }
     
 
-    .container1 .line-4 .row #img{
-        width: 100%;
-        height: auto;
-        padding: 0px;
-    }
+ 
     .container1 .line-4 .row .step {
         position: relative;
         display: flex;
@@ -2718,7 +2396,6 @@
 
     .container1 .line-4 {
         color: #19195E;
-        margin-top: 335% ;
     }
     
     

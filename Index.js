@@ -23,25 +23,28 @@ document.addEventListener('DOMContentLoaded', () => {
         const slideTransitionDuration = 1000; // Thời gian chuyển slide (1 giây)
         const carouselElement = document.querySelector('#testimonialCarousel');
         if (!carouselElement) return;
-
+    
+        // Khởi tạo Bootstrap Carousel
+        const carousel = new bootstrap.Carousel(carouselElement);
+    
         const prevButton = carouselElement.querySelector('.carousel-control-prev');
         const nextButton = carouselElement.querySelector('.carousel-control-next');
-
+    
         const handleCarouselClick = (direction) => {
-            console.log(`Chuyển slide ${direction}`);
             setTimeout(() => carousel.cycle(), slideTransitionDuration);
         };
-
+    
         prevButton?.addEventListener('click', () => handleCarouselClick('trước'));
         nextButton?.addEventListener('click', () => handleCarouselClick('tiếp theo'));
-
+    
         carouselElement.addEventListener('slid.bs.carousel', (e) => {
             console.log('Slide hiện tại:', e.relatedTarget);
         });
-
+    
         // Ngừng sự kiện cuộn của carousel trên thiết bị cảm ứng
         carouselElement.addEventListener('touchstart', (e) => e.preventDefault(), { passive: false });
     };
+    
 
     // Gán sự kiện cho các phần tử
     const assignEvent = (selector, event, handler) => {
