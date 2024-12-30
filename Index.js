@@ -9,9 +9,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const updateContentBasedOnWidth = () => {
         const changeElement = document.querySelector('.change');
         if (!changeElement) return;
-        const content = window.innerWidth < 740
+
+        const content = window.innerWidth < 769
             ? 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH'
-            : window.innerWidth <= 1023
+            : window.innerWidth <= 1024
             ? 'SSBVIETNAM - CHUYÊN GIA HÀNG ĐẦU TRONG THẨM ĐỊNH GIÁ & TƯ VẤN TÀI CHÍNH'
             : 'Giải pháp định giá toàn diện cho doanh nghiệp của bạn';
         changeElement.innerHTML = content;
@@ -19,98 +20,83 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Quản lý carousel testimonials
     const manageCarouselTestimonials = () => {
-        const slideTransitionDuration = 1000; // Đặt thời gian chuyển là 1 giây (1000ms)
-
+        const slideTransitionDuration = 1000; // Thời gian chuyển slide (1 giây)
         const carouselElement = document.querySelector('#testimonialCarousel');
         if (!carouselElement) return;
 
         const prevButton = carouselElement.querySelector('.carousel-control-prev');
         const nextButton = carouselElement.querySelector('.carousel-control-next');
 
-        // Ngừng sự kiện cuộn của carousel
-        carouselElement.addEventListener('touchstart', (e) => {
-            e.preventDefault();
-        }, { passive: false });
+        const handleCarouselClick = (direction) => {
+            console.log(`Chuyển slide ${direction}`);
+            setTimeout(() => carousel.cycle(), slideTransitionDuration);
+        };
 
-        // Gán sự kiện khi nhấn nút chuyển slide
-        prevButton?.addEventListener('click', () => {
-            console.log('Chuyển về slide trước');
-            setTimeout(() => {
-                carousel.cycle(); // Tiếp tục tự động chạy carousel nếu cần
-            }, slideTransitionDuration); // Sau khi hoàn thành chuyển slide
-        });
+        prevButton?.addEventListener('click', () => handleCarouselClick('trước'));
+        nextButton?.addEventListener('click', () => handleCarouselClick('tiếp theo'));
 
-        nextButton?.addEventListener('click', () => {
-            console.log('Chuyển tới slide tiếp theo');
-            setTimeout(() => {
-                carousel.cycle(); // Tiếp tục tự động chạy carousel nếu cần
-            }, slideTransitionDuration); // Sau khi hoàn thành chuyển slide
-        });
-
-        // Cập nhật nội dung slide khi có sự kiện chuyển slide
         carouselElement.addEventListener('slid.bs.carousel', (e) => {
             console.log('Slide hiện tại:', e.relatedTarget);
         });
 
-      
+        // Ngừng sự kiện cuộn của carousel trên thiết bị cảm ứng
+        carouselElement.addEventListener('touchstart', (e) => e.preventDefault(), { passive: false });
     };
 
-    // Hàm gán sự kiện cho các phần tử
+    // Gán sự kiện cho các phần tử
     const assignEvent = (selector, event, handler) => {
-        const elements = document.querySelectorAll(selector);
-        elements.forEach(element => element.addEventListener(event, handler));
+        document.querySelectorAll(selector).forEach(element => {
+            element.addEventListener(event, handler);
+        });
     };
 
     // Sự kiện resize và cập nhật nội dung
     window.addEventListener('resize', updateContentBasedOnWidth);
     updateContentBasedOnWidth();
 
-    // Popup "TÌM HIỂU THÊM" và "TUYỂN DỤNG"
+    // Popup: Tìm hiểu thêm, Tuyển dụng và Tuyển dụng 2
     assignEvent('.btn', 'click', () => togglePopupVisibility('timhieuthem-popup', true));
     assignEvent('#popup-tuyendung', 'click', (e) => {
         e.preventDefault();
         togglePopupVisibility('tuyendung-popup', true);
     });
+    assignEvent('#popup-tuyendung2', 'click', (e) => {
+        e.preventDefault();
+        togglePopupVisibility('tuyendung2-popup', true);
+    });
 
-    // Đóng popup
+    // Đóng tất cả các popup
     assignEvent('.popup-content .close-btn', 'click', () => {
         togglePopupVisibility('timhieuthem-popup', false);
         togglePopupVisibility('tuyendung-popup', false);
+        togglePopupVisibility('tuyendung2-popup', false);
     });
 
-    function openPopup() {
-        document.getElementById('tuyendung-popup').style.display = 'flex';
-    }
+    // Đóng popup khi nhấn ngoài overlay
+    const closePopupOnClickOutside = (popupId) => {
+        const popup = document.getElementById(popupId);
+        popup?.addEventListener('click', (event) => {
+            if (event.target === popup) togglePopupVisibility(popupId, false);
+        });
+    };
 
-    // Hàm để đóng popup
-    function closePopup() {
-        document.getElementById('tuyendung-popup').style.display = 'none';
-    }
+    closePopupOnClickOutside('tuyendung-popup');
+    closePopupOnClickOutside('tuyendung2-popup');
 
-    // Tùy chọn: Đóng popup khi nhấn ra ngoài overlay
-    document.getElementById('tuyendung-popup').addEventListener('click', function (event) {
-        if (event.target === this) {
-            closePopup();
-        }
-    });
-    
     // Hộp khảo sát
     assignEvent('#showSurvey', 'click', () => togglePopupVisibility('boxStep3', true));
     assignEvent('#closeSurvey', 'click', () => togglePopupVisibility('boxStep3', false));
 
-    // Popup "NHẬN TƯ VẤN MIỄN PHÍ"
+    // Popup "Nhận tư vấn miễn phí"
     assignEvent('.btn.px-4.py-3.fw-bold', 'click', () => togglePopupVisibility('nhantuvan-popup', true));
     assignEvent('#nhantuvan-popup .close-btn', 'click', () => togglePopupVisibility('nhantuvan-popup', false));
 
-    // Kích hoạt chức năng quản lý carousel
+    // Kích hoạt chức năng carousel testimonials
     manageCarouselTestimonials();
-});
-// Hiển thị popup khi nhấn vào mục "popup-call"
-document.getElementById("popup-call").addEventListener("click", function () {
-    document.getElementById("popup-call-overlay").style.display = "flex";
-});
+    
+    // Hiển thị popup khi nhấn vào "popup-call"
+    assignEvent('#popup-call', 'click', () => togglePopupVisibility('popup-call-overlay', true));
 
-// Đóng popup khi nhấn vào nút "Đóng"
-document.querySelector("[data-popup-close='popup-call-overlay']").addEventListener("click", function () {
-    document.getElementById("popup-call-overlay").style.display = "none";
+    // Đóng popup "popup-call" khi nhấn vào nút "Đóng"
+    assignEvent("[data-popup-close='popup-call-overlay']", 'click', () => togglePopupVisibility('popup-call-overlay', false));
 });
