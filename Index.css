@@ -22,7 +22,9 @@ html, body {
     flex-wrap: wrap;
     margin: 0;
 }
-
+b, strong {
+    font-size: 28px;
+}
 a {
     color: #19195E;
     text-decoration: none;
