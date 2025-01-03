@@ -53,32 +53,6 @@ body {
     z-index: -1;
 }
 
-.popup-content,
-.content-popup {
-    position: relative;
-    background-color: #ffffff;
-    color: #333333;
-    padding: 30px 20px;
-    border-radius: 10px;
-    max-width: 700px;
-    max-height: 90%;
-    overflow-y: auto;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
-    font-family: Arial, sans-serif;
-    text-align: start;
-    animation: popup-appear 0.4s ease-in-out;
-}
-
-.popup-content p {
-    margin: 10px 0;
-    line-height: 1.5;
-}
-
-.popup-content .contact-title,
-.job-title {
-    font-weight: bold;
-    color: #5768cd;
-}
 
 .job-sublist {
     list-style: none;
@@ -127,12 +101,53 @@ body {
         opacity: 1;
     }
 }
+.popup-overlay {
+    position: fixed; /* Luôn cố định trên màn hình */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Hiệu ứng nền mờ */
+    display: none; /* Ẩn mặc định */
+    z-index: 1000; /* Đảm bảo overlay luôn ở trên */
+    justify-content: center; /* Căn giữa nội dung theo chiều ngang */
+    align-items: center; /* Căn giữa nội dung theo chiều dọc */
+    display: flex; /* Sử dụng flexbox để căn giữa */
+}
+
+.popup-content {
+    position: relative;
+    background-color: #ffffff;
+    color: #333333;
+    padding: 30px 20px;
+    border-radius: 10px;
+    max-width: 700px;
+    width: 90%; /* Hỗ trợ màn hình nhỏ */
+    max-height: 90%; /* Đảm bảo nội dung không vượt quá màn hình */
+    overflow-y: auto; /* Cuộn nếu nội dung quá dài */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    font-family: Arial, sans-serif;
+    text-align: start;
+    animation: popup-appear 0.4s ease-in-out;
+}
+
+.popup-content p {
+    margin: 10px 0;
+    line-height: 1.5;
+}
+
+.popup-content .contact-title {
+    font-weight: bold;
+    color: #5768cd;
+    font-size: 18px;
+}
 
 @media (max-width: 768px) {
     .popup-content {
         font-size: 14px;
     }
 }
+
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {

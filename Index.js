@@ -1,10 +1,32 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Hàm hiển thị/ẩn popup
     const togglePopupVisibility = (popupId, show) => {
         const popup = document.getElementById(popupId);
-        if (popup) popup.style.display = show ? 'flex' : 'none';
+        if (popup) {
+            if (show) {
+                popup.style.display = "flex"; // Hiển thị với flexbox
+            } else {
+                popup.style.display = "none"; // Ẩn đi
+            }
+        }
     };
-
+    
+    // Sự kiện cho các nút mở popup
+    document.querySelectorAll("[data-popup-id]").forEach((button) => {
+        const popupId = button.getAttribute("data-popup-id");
+        button.addEventListener("click", () => {
+            togglePopupVisibility(popupId, true);
+        });
+    });
+    
+    // Sự kiện cho overlay hoặc nút đóng popup
+    document.querySelectorAll(".popup-overlay").forEach((popup) => {
+        popup.addEventListener("click", (event) => {
+            if (event.target === popup || event.target.classList.contains("close-btn")) {
+                popup.style.display = "none";
+            }
+        });
+    });
+    
     // Cập nhật nội dung theo kích thước màn hình
     const updateContentBasedOnWidth = () => {
         const changeElement = document.querySelector('.change');
@@ -74,14 +96,6 @@ document.addEventListener('DOMContentLoaded', () => {
         togglePopupVisibility('tuyendung-popup', false);
         togglePopupVisibility('tuyendung2-popup', false);
     });
-
-    // Đóng popup khi nhấn ngoài overlay
-    const closePopupOnClickOutside = (popupId) => {
-        const popup = document.getElementById(popupId);
-        popup?.addEventListener('click', (event) => {
-            if (event.target === popup) togglePopupVisibility(popupId, false);
-        });
-    };
 
     closePopupOnClickOutside('tuyendung-popup');
     closePopupOnClickOutside('tuyendung2-popup');
