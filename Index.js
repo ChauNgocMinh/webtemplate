@@ -89,6 +89,23 @@ document.addEventListener('DOMContentLoaded', () => {
         e.preventDefault();
         togglePopupVisibility('tuyendung2-popup', true);
     });
+    
+    document.querySelectorAll('.close-popup').forEach((btn) => {
+        btn.addEventListener('click', function () {
+            const popup = this.closest('.overlay-popup');
+            popup.style.display = 'none';
+        });
+    });
+    
+    // Đóng popup khi nhấn ra ngoài vùng nội dung
+    document.querySelectorAll('.overlay-popup').forEach((popup) => {
+        popup.addEventListener('click', function (e) {
+            // Kiểm tra nếu người dùng click vào vùng ngoài nội dung của popup
+            if (e.target === this) {
+                this.style.display = 'none';
+            }
+        });
+    });
 
     // Đóng tất cả các popup
     assignEvent('.popup-content .close-btn', 'click', () => {

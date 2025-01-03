@@ -67,6 +67,69 @@ body {
     padding: 0;
     margin: 0;
 }
+/* CSS for the popup */
+.overlay-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.content-popup {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 90%;
+    max-height: 80%;
+    overflow-y: auto; /* Scrollable if content exceeds height */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: popupFadeIn 0.3s ease-in-out;
+}
+.close-wrapper {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px; 
+}
+
+.close-popup {
+    background: #ff0000;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+}
+
+.close-popup:hover {
+    background-color: #d50000;
+}
+
+@keyframes popupFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Responsive adjustments */
+@media (min-width: 768px) {
+    .content-popup {
+        max-width: 50%; /* Wider popup on larger screens */
+    }
+}
 
 .btn-close-popup,
 .close-btn {
